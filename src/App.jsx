@@ -40,7 +40,7 @@ function App() {
       <Navbar />
       <Header message="Welcome to my Personal Website!" />
       <About animation={animation} />
-      <Skills />
+      <Skills techStacks={techStacks} />
       <Projects techStacks={techStacks} />
       <Footer />
     </>
