@@ -16,6 +16,30 @@ function Navbar() {
             />
           </a>
         </div>
+        <div className="hidden lg:flex w-100">
+          <ul className="flex items-center justify-around w-full lg:gap-x-12">
+            <li>
+              <a href="#hero-section" className="hover:text-sky-500">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#skills-section" className="hover:text-sky-500">
+                Skills
+              </a>
+            </li>
+            <li>
+              <a href="#projects-section" className="hover:text-sky-500">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="#contacts-section" className="hover:text-sky-500">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </>
   );
