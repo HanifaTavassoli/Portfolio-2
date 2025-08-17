@@ -1,4 +1,12 @@
-function Card({ image, name, description, liveUrl, codeLink, featured }) {
+function Card({
+  image,
+  name,
+  description,
+  liveUrl,
+  codeLink,
+  featured,
+  stacks = [],
+}) {
   return (
     <>
       <div className="bg-neutral-800 rounded-sm overflow-hidden w-full max-w-[320px]">
@@ -11,7 +19,11 @@ function Card({ image, name, description, liveUrl, codeLink, featured }) {
         </a>
         <div className="text-start p-5">
           <h3 className="text-xl font-bold mb-2">{name}</h3>
-          <div className="flex flex-row mb-4 gap-3"></div>
+          <div className="flex flex-row mb-4 gap-3">
+            {stacks.map((stack) => (
+              <img src={stack} alt={`${stack} logo`} className="w-7" />
+            ))}
+          </div>
           <p className="mb-8">{description}</p>
           <div className="flex flex-wrap sm:flex-nowrap sm:flex-row gap-4 items-center justify-center text-sm">
             <a
