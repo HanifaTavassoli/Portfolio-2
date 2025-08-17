@@ -11,6 +11,11 @@ function Header() {
     "It always seems impossible until it's done.",
     "The future belongs to those who believe in the beauty of their dreams.",
   ];
+
+  const getRandomQuote = () => {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    return quotes[randomIndex];
+  };
   return <p>Header</p>;
 }
 
