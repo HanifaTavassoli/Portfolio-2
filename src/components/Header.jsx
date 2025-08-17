@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import profile from "../assets/img/Hanifa.jpg";
-function Header() {
+function Header({ message }) {
   const [quote, setQuote] = useState("");
 
   // Array of motivational quotes
@@ -35,6 +35,7 @@ function Header() {
             <h3 className="text-neutral-300 text-base sm:text-lg font-semibold mb-2 sm:mb-3">
               Hi, I am
               <span className="text-sky-500 mx-2">Hanifa Tavassoli.</span>
+              {message}
             </h3>
             <h1 className="text-white text-2xl  mb-10 sm:text-3xl md:text-4xl font-bold">
               Front-end Web Developer
