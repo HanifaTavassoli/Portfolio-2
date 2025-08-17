@@ -1,3 +1,21 @@
 export function Profile() {
-  return <p>Profile section</p>;
+  return (
+    <>
+      <img
+        src="../assets/img/Hanifa.jpg"
+        alt="Hanifa"
+        className="w-24 h-24 sm:w-28 sm:h-28 md:w-28 md:h-28 lg:w-32 lg:h-32 object-cover rounded-full mx-auto mb-6 sm:mb-8"
+      />
+      <div className="mb-[48px]">
+        <h3 className="text-neutral-300 text-base sm:text-lg font-semibold mb-2 sm:mb-3">
+          Hi, I am
+          <span className="text-sky-500 mx-2">Hanifa Tavassoli.</span>
+          Welcome to my Personal Website
+        </h3>
+        <h1 className="text-white text-2xl  mb-10 sm:text-3xl md:text-4xl font-bold">
+          Front-end Web Developer
+        </h1>
+      </div>
+    </>
+  );
 }
