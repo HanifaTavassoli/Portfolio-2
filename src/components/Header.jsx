@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import profile from "../assets/img/Hanifa.jpg";
+import { Profile } from "./Profile";
 function Header({ message }) {
   const [quote, setQuote] = useState("");
 
@@ -26,21 +27,12 @@ function Header({ message }) {
         className="min-h-screen flex items-center justify-center px-4 py-10 sm:px-6"
       >
         <div className="custom-container w-full max-w-2xl mx-auto text-center">
-          <img
-            src={profile}
-            alt="Hanifa"
-            className="w-24 h-24 sm:w-28 sm:h-28 md:w-28 md:h-28 lg:w-32 lg:h-32 object-cover rounded-full mx-auto mb-6 sm:mb-8"
+          <Profile
+            profile={profile}
+            message={message}
+            name="Hanifa Tavassoli."
+            title="Front-end Web Developer"
           />
-          <div className="mb-[48px]">
-            <h3 className="text-neutral-300 text-base sm:text-lg font-semibold mb-2 sm:mb-3">
-              Hi, I am
-              <span className="text-sky-500 mx-2">Hanifa Tavassoli.</span>
-              {message}
-            </h3>
-            <h1 className="text-white text-2xl  mb-10 sm:text-3xl md:text-4xl font-bold">
-              Front-end Web Developer
-            </h1>
-          </div>
           <div className="flex flex-wrap gap-4 mb-16 justify-center items-center">
             <a
               href="#"
