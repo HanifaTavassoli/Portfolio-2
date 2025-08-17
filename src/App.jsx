@@ -36,7 +36,7 @@ function App() {
     <>
       <Navbar />
       <Header message="Welcome to my Personal Website!" />
-      <Projects />
+      <Projects techStacks={techStacks} />
       <Footer />
     </>
   );
