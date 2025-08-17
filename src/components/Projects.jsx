@@ -1,3 +1,4 @@
+import Card from "./Card";
 function Projects() {
   const projects = [
     {
