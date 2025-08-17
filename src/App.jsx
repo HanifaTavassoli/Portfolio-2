@@ -19,6 +19,19 @@ import git from "./assets/img/skills/git.svg";
 import wordpress from "./assets/img/skills/wordpress.png";
 
 function App() {
+  const techStacks = {
+    html: html,
+    css: css,
+    js: js,
+    sass: sass,
+    bootstrap: bootstrap,
+    tailwind: tailwind,
+    react: react,
+    mysql: mysql,
+    git: git,
+    wordpress: wordpress,
+  };
+
   return (
     <>
       <Navbar />
