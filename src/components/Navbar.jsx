@@ -1,5 +1,6 @@
+import logo from "../assets/img/logo.png";
 function Navbar() {
-  return <h1>Navbar</h1>;
+  return <></>;
 }
 
 export default Navbar;
