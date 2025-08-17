@@ -1,9 +1,15 @@
 import Card from "./Card";
+import omnifood from "../assets/img/Projects/omnifood.png";
+import portfolio from "../assets/img/Projects/portfolio.png";
+import natours from "../assets/img/Projects/natours.png";
+import travana from "../assets/img/Projects/travana.png";
+import furnivo from "../assets/img/Projects/furnivo-homepage.png";
+
 function Projects() {
   const projects = [
     {
       name: "omnifood",
-      image: "../assets/img/Projects/omnifood.png",
+      image: omnifood,
       descipriton: "a custom healthy meal delivered website.",
       codeLink: "https://github.com/HanifaTavassoli/Omnifood",
       liveUrl: "https://hanifa-omnifood.netlify.app",
@@ -11,7 +17,7 @@ function Projects() {
     },
     {
       name: "portfolio",
-      image: "../assets/img/Projects/omnifood.png",
+      image: portfolio,
       descipriton:
         "A personal portfolio website to showcase my skills and projects.",
       codeLink: "https://github.com/HanifaTavassoli/Portfolio",
@@ -20,7 +26,7 @@ function Projects() {
     },
     {
       name: "Natours",
-      image: "../assets/img/Projects/natours.png",
+      image: natours,
       descipriton:
         "A custom nature tour experience website for adventurous travelers.",
       codeLink: "https://github.com/HanifaTavassoli/Natours",
@@ -29,7 +35,7 @@ function Projects() {
     },
     {
       name: "Furnivo",
-      image: "../assets/img/Projects/furnivo-homepage.png",
+      image: furnivo,
       descipriton: "A WordPress site showcasing stylish furniture collections.",
       codeLink: "#",
       liveUrl: "https://dahlia-finalproject.afghanpathways.com",
@@ -37,7 +43,7 @@ function Projects() {
     },
     {
       name: "Travana",
-      image: "../assets/img/Projects/travana.png",
+      image: travana,
       descipriton:
         "A custom travel service with personalized luxury vacations.",
       codeLink: "#",
