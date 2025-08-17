@@ -1,11 +1,11 @@
-function About() {
+function About({ animation }) {
   return (
     <section className="py-20 bg-neutral-800 " id="about-section">
       <div className="custom-container">
         <div className="flex flex-col md:flex-row gap-10">
           <img
             alt="GIF"
-            src=""
+            src={animation}
             className="rounded-sm mx-auto md:mx-0"
             width="500"
             height="250"
