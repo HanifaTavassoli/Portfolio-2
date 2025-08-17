@@ -1,4 +1,9 @@
+import { useState } from "react";
 function About({ animation }) {
+  const [showMore, setShowMore] = useState(true);
+  const toggleShowMore = () => {
+    setShowMore((showMore) => !showMore);
+  };
   return (
     <section className="py-20 bg-neutral-800 " id="about-section">
       <div className="custom-container">
@@ -17,7 +22,7 @@ function About({ animation }) {
             <div className="sm:text-base md:text-lg hyphenate text-base">
               <span>
                 I'm
-                <a href="#" className="text-sky-500 mx-1">
+                <a href="#" className="text-sky-500">
                   Hanifa Tavassoli
                 </a>
                 from Herat, Afghanistan. I'm a third-year Computer Science
