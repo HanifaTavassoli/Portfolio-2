@@ -1,22 +1,22 @@
 import logo from "../assets/img/logo.png";
 function Footer() {
   return (
-    <footer class="bg-neutral-950 py-16">
-      <div class="custom-container grid grid-rows-3 gap-3 justify-items-center text-white text-center">
+    <footer className="bg-neutral-950 py-16">
+      <div className="custom-container grid grid-rows-3 gap-3 justify-items-center text-white text-center">
         <div>
           <a href="#">
             <img
               src={logo}
               alt="logo"
-              class="h-16 rounded-full border-2 border-neutral-950"
+              className="h-16 rounded-full border-2 border-neutral-950"
             />
           </a>
         </div>
-        <ul class="flex gap-5 items-center">
+        <ul className="flex gap-5 items-center">
           <li>
             <a
               href="https://github.com/hanifatavassoli"
-              class="text-2xl hover:text-sky-500"
+              className="text-2xl hover:text-sky-500"
               target="_blank"
             >
               <i className="bi bi-github"></i>
@@ -25,7 +25,7 @@ function Footer() {
           <li>
             <a
               href="https://twitter.com/hanifatavassoli"
-              class="text-2xl hover:text-sky-500"
+              className="text-2xl hover:text-sky-500"
               target="_blank"
             >
               <i className="bi bi-twitter"></i>
@@ -34,7 +34,7 @@ function Footer() {
           <li>
             <a
               href="https://www.linkedin.com/in/hanifatavassoli"
-              class="text-2xl hover:text-sky-500"
+              className="text-2xl hover:text-sky-500"
               target="_blank"
             >
               <i className="bi bi-linkedin"></i>
@@ -43,7 +43,7 @@ function Footer() {
           <li>
             <a
               href="https://t.me/hnf_HANI"
-              class="text-2xl hover:text-sky-500"
+              className="text-2xl hover:text-sky-500"
               target="_blank"
             >
               <i className="bi bi-telegram"></i>
