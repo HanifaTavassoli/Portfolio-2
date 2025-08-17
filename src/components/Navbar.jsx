@@ -72,6 +72,45 @@ function Navbar() {
           </button>
         </div>
       </nav>
+
+      {/* <!-- Mobile menu panel (initially hidden) --> */}
+      <div
+        id="mobile-menu"
+        className="hidden fixed inset-0 z-50 bg-neutral-900/95 lg:hidden"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div className="flex justify-between items-center p-6">
+          <a href="#">
+            <span className="sr-only">Hanifa Tavassoli</span>
+            <img
+              src={logo}
+              alt="logo"
+              className="h-12 w-auto rounded-full border-2 border-neutral-950"
+            />
+          </a>
+          <button
+            id="close-menu"
+            type="button"
+            className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-100 cursor-pointer"
+          >
+            <span className="sr-only">Close menu</span>
+            <svg
+              className="size-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
     </>
   );
 }
