@@ -40,7 +40,56 @@ function Header() {
               Front-end Web Developer
             </h1>
           </div>
+          <div className="flex flex-wrap gap-4 mb-16 justify-center items-center">
+            <a
+              href="#"
+              target="_blank"
+              className="flex items-center gap-2 bg-slate-800 text-sky-500 rounded-sm py-2 px-4 text-sm sm:text-base hover:bg-slate-900"
+            >
+              <span className=""> Github </span>
+              <span className="inline-block align-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                  />
+                </svg>
+              </span>
+            </a>
 
+            <a
+              hover:bg-slate-900
+              href="#"
+              target="_blank"
+              className="flex items-center gap-2 bg-slate-800 text-sky-500 rounded-sm py-2 px-4 text-sm sm:text-base hover:bg-slate-900"
+            >
+              <span className="">Download CV</span>
+              <span className="inline-block">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
           <div className="text-neutral-200 italic text-sm sm:text-base">
             <p>"{quote}"</p>
           </div>
