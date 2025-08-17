@@ -17,6 +17,7 @@ function Footer() {
             <a
               href="https://github.com/hanifatavassoli"
               class="text-2xl hover:text-sky-500"
+              target="_blank"
             >
               <i className="bi bi-github"></i>
             </a>
@@ -25,6 +26,7 @@ function Footer() {
             <a
               href="https://twitter.com/hanifatavassoli"
               class="text-2xl hover:text-sky-500"
+              target="_blank"
             >
               <i className="bi bi-twitter"></i>
             </a>
@@ -33,12 +35,17 @@ function Footer() {
             <a
               href="https://www.linkedin.com/in/hanifatavassoli"
               class="text-2xl hover:text-sky-500"
+              target="_blank"
             >
               <i className="bi bi-linkedin"></i>
             </a>
           </li>
           <li>
-            <a href="https://t.me/hnf_HANI" class="text-2xl hover:text-sky-500">
+            <a
+              href="https://t.me/hnf_HANI"
+              class="text-2xl hover:text-sky-500"
+              target="_blank"
+            >
               <i className="bi bi-telegram"></i>
             </a>
           </li>
