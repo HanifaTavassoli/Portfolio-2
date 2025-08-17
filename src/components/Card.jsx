@@ -18,13 +18,19 @@ function Card({
           />
         </a>
         <div className="text-start p-5">
-          <h3 className="text-xl font-bold mb-2">{name}</h3>
+          <div className="d-flex mb-2">
+            <h3 className="text-xl font-bold mr-2 inline-block">{name}</h3>
+            {featured && (
+              <i className="bi bi-patch-check-fill inline text-sky-500 text-lg"></i>
+            )}
+          </div>
           <div className="flex flex-row mb-4 gap-3">
             {stacks.map((stack) => (
               <img src={stack} alt={`${stack} logo`} className="w-7" />
             ))}
           </div>
-          <p className="mb-8">{description}</p>
+          <p className="mb-3">{description}</p>
+
           <div className="flex flex-wrap sm:flex-nowrap sm:flex-row gap-4 items-center justify-center text-sm">
             <a
               href={codeLink}
