@@ -12,6 +12,13 @@ function Footer() {
             />
           </a>
         </div>
+        <div>
+          <p>
+            Designed and developed by
+            <a href="https://github.com/hanifatavassoli"> Hanifa Tavassoli </a>
+            &copy; 2025
+          </p>
+        </div>
       </div>
     </footer>
   );
