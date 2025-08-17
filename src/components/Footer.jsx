@@ -54,7 +54,7 @@ function Footer() {
           <p>
             Designed and developed by
             <a href="https://github.com/hanifatavassoli"> Hanifa Tavassoli </a>
-            &copy; 2025
+            &copy; {new Date().getFullYear()}
           </p>
         </div>
       </div>
