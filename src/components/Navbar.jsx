@@ -40,6 +40,37 @@ function Navbar() {
             </li>
           </ul>
         </div>
+        {/* <!-- Mobile menu toggle button --> */}
+        <div className="flex items-center w-full px-4 py-2 lg:hidden bg-neutral-950 fixed top-0 justify-between">
+          <a href="#">
+            <span className="sr-only">Hanifa Tavassoli</span>
+            <img
+              src={logo}
+              alt="logo"
+              className="h-12 w-auto rounded-full border-2 border-neutral-950"
+            />
+          </a>
+          <button
+            id="open-menu"
+            type="button"
+            className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-100 cursor-pointer"
+          >
+            <span className="sr-only">Open main menu</span>
+            <svg
+              className="size-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
       </nav>
     </>
   );
