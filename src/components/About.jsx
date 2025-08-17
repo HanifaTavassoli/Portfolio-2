@@ -40,7 +40,7 @@ function About({ animation }) {
                 </span>
               )}
               <button
-                className="text-sky-500 cursor-pointer ml-1"
+                className="text-sky-500 hover:text-sky-600 ml-1 cursor-pointer transition-all"
                 onClick={toggleShowMore}
               >
                 {showMore ? "Hide Details" : "More Details"}
