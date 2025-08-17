@@ -40,6 +40,10 @@ function Header() {
               Front-end Web Developer
             </h1>
           </div>
+
+          <div className="text-neutral-200 italic text-sm sm:text-base">
+            <p>"{quote}"</p>
+          </div>
         </div>
       </header>
     </>
