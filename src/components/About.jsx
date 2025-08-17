@@ -1,6 +1,6 @@
 import { useState } from "react";
 function About({ animation }) {
-  const [showMore, setShowMore] = useState(true);
+  const [showMore, setShowMore] = useState(false);
   const toggleShowMore = () => {
     setShowMore((showMore) => !showMore);
   };
