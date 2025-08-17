@@ -1,4 +1,4 @@
-function Card() {
+function Card({ image, name, description, liveUrl, codeLink, featured }) {
   return (
     <>
       <div class="bg-neutral-800 rounded-sm overflow-hidden w-full max-w-[320px]">
