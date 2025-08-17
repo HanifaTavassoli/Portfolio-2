@@ -11,7 +11,7 @@ function About({ animation }) {
           <img
             alt="GIF"
             src={animation}
-            className="rounded-sm mx-auto md:mx-0"
+            className="mx-auto md:mx-0 rounded-lg shadow-lg transition-transform transform hover:scale-105"
             width="500"
             height="250"
           />
