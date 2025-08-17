@@ -22,7 +22,7 @@ function About({ animation }) {
             <div className="sm:text-base md:text-lg hyphenate text-base">
               <span>
                 I'm
-                <a href="#" className="text-sky-500">
+                <a href="#" className="text-sky-500 mx-1">
                   Hanifa Tavassoli
                 </a>
                 from Herat, Afghanistan. I'm a third-year Computer Science
@@ -31,6 +31,20 @@ function About({ animation }) {
                 software engineer and contribute to innovative projects that
                 will shape the future of the tech industry.
               </span>
+              {showMore && (
+                <span>
+                  Right now, I'm focused on learning React and JavaScript to
+                  enhance my front-end development skills. I’m excited to
+                  continue this journey of growth and look forward to creating
+                  meaningful contributions to the world of technology!
+                </span>
+              )}
+              <button
+                className="text-sky-500 cursor-pointer ml-1"
+                onClick={toggleShowMore}
+              >
+                {showMore ? "Hide Details" : "More Details"}
+              </button>
             </div>
           </div>
         </div>
