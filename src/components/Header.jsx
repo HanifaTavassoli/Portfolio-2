@@ -16,6 +16,9 @@ function Header() {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     return quotes[randomIndex];
   };
+  useEffect(() => {
+    setQuote(getRandomQuote());
+  }, []);
   return <p>Header</p>;
 }
 
