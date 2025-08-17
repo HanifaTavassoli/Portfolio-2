@@ -63,7 +63,11 @@ function Projects({ techStacks }) {
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-[48px]">
           My Projects
         </h2>
-        <div className="grid gap-x-0 md:gap-x-8 gap-y-8 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center mx-auto"></div>
+        <div className="grid gap-x-0 md:gap-x-8 gap-y-8 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center mx-auto">
+          {projects.map((project) => (
+            <Card {...project} />
+          ))}
+        </div>
       </div>
     </section>
   );
