@@ -4,6 +4,7 @@ import "./components/Navbar";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import About from "./components/About";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 
@@ -36,6 +37,7 @@ function App() {
     <>
       <Navbar />
       <Header message="Welcome to my Personal Website!" />
+      <About />
       <Projects techStacks={techStacks} />
       <Footer />
     </>
