@@ -44,7 +44,16 @@ function Projects() {
       featured: false,
     },
   ];
-  return <h1>Pojects section</h1>;
+  return (
+    <section id="projects-section" class="py-20 mt-5">
+      <div class="custom-container py-5 px-4 text-center mx-auto">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-[48px]">
+          My Projects
+        </h2>
+        <div class="grid gap-x-0 md:gap-x-8 gap-y-8 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center mx-auto"></div>
+      </div>
+    </section>
+  );
 }
 
 export default Projects;
