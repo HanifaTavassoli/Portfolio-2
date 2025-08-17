@@ -19,7 +19,22 @@ function Header() {
   useEffect(() => {
     setQuote(getRandomQuote());
   }, []);
-  return <p>Header</p>;
+  return (
+    <>
+      <header
+        id="hero-section"
+        className="min-h-screen flex items-center justify-center px-4 py-10 sm:px-6"
+      >
+        <div className="custom-container w-full max-w-2xl mx-auto text-center">
+          <img
+            src={profile}
+            alt="Hanifa"
+            className="w-24 h-24 sm:w-28 sm:h-28 md:w-28 md:h-28 lg:w-32 lg:h-32 object-cover rounded-full mx-auto mb-6 sm:mb-8"
+          />
+        </div>
+      </header>
+    </>
+  );
 }
 
 export default Header;
