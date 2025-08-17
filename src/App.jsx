@@ -19,6 +19,8 @@ import mysql from "./assets/img/skills/mysql.svg";
 import git from "./assets/img/skills/git.svg";
 import wordpress from "./assets/img/skills/wordpress.png";
 
+import animation from "./assets/img/animation.gif";
+
 function App() {
   const techStacks = {
     html: html,
@@ -37,7 +39,7 @@ function App() {
     <>
       <Navbar />
       <Header message="Welcome to my Personal Website!" />
-      <About />
+      <About animation={animation} />
       <Projects techStacks={techStacks} />
       <Footer />
     </>
