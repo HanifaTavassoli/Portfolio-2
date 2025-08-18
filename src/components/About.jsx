@@ -5,8 +5,8 @@ function About({ animation }) {
     setShowMore((showMore) => !showMore);
   };
   return (
-    <section className="py-20 bg-neutral-800 " id="about-section">
-      <div className="custom-container">
+    <section className="py-20 bg-neutral-800  " id="about-section">
+      <div className="custom-container py-5">
         <div className="flex flex-col md:flex-row gap-10">
           <img
             alt="GIF"
