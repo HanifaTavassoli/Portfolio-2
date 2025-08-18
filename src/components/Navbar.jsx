@@ -24,6 +24,11 @@ function Navbar() {
               </a>
             </li>
             <li>
+              <a href="#about-section" className="hover:text-sky-500">
+                About
+              </a>
+            </li>
+            <li>
               <a href="#skills-section" className="hover:text-sky-500">
                 Skills
               </a>
@@ -31,11 +36,6 @@ function Navbar() {
             <li>
               <a href="#projects-section" className="hover:text-sky-500">
                 Projects
-              </a>
-            </li>
-            <li>
-              <a href="#contacts-section" className="hover:text-sky-500">
-                Contact
               </a>
             </li>
           </ul>
@@ -118,6 +118,11 @@ function Navbar() {
             </a>
           </li>
           <li>
+            <a href="#about-section" className="hover:text-sky-500">
+              About
+            </a>
+          </li>
+          <li>
             <a href="#skills-section" className="hover:text-sky-500">
               Skills
             </a>
@@ -125,11 +130,6 @@ function Navbar() {
           <li>
             <a href="#projects-section" className="hover:text-sky-500">
               Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contacts-section" className="hover:text-sky-500">
-              Contact
             </a>
           </li>
         </ul>
