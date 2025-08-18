@@ -1,5 +1,15 @@
 import logo from "../assets/img/logo.png";
+import { useState } from "react";
 function Navbar() {
+  const [openMenu, setOpenMenu] = useState(false);
+  const handleMenuClick = (sectionId) => {
+    setOpenMenu(false);
+
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <nav
@@ -24,6 +34,11 @@ function Navbar() {
               </a>
             </li>
             <li>
+              <a href="#about-section" className="hover:text-sky-500">
+                About
+              </a>
+            </li>
+            <li>
               <a href="#skills-section" className="hover:text-sky-500">
                 Skills
               </a>
@@ -31,11 +46,6 @@ function Navbar() {
             <li>
               <a href="#projects-section" className="hover:text-sky-500">
                 Projects
-              </a>
-            </li>
-            <li>
-              <a href="#contacts-section" className="hover:text-sky-500">
-                Contact
               </a>
             </li>
           </ul>
@@ -54,6 +64,7 @@ function Navbar() {
             id="open-menu"
             type="button"
             className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-100 cursor-pointer"
+            onClick={() => setOpenMenu(!openMenu)}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -76,7 +87,9 @@ function Navbar() {
       {/* <!-- Mobile menu panel (initially hidden) --> */}
       <div
         id="mobile-menu"
-        className="hidden fixed inset-0 z-50 bg-neutral-900/95 lg:hidden"
+        className={`fixed inset-0 z-50 bg-neutral-900/95 lg:hidden ${
+          openMenu ? "block" : "hidden"
+        }`}
         role="dialog"
         aria-modal="true"
       >
@@ -93,6 +106,7 @@ function Navbar() {
             id="close-menu"
             type="button"
             className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-100 cursor-pointer"
+            onClick={() => setOpenMenu(false)}
           >
             <span className="sr-only">Close menu</span>
             <svg
@@ -113,23 +127,39 @@ function Navbar() {
 
         <ul className="flex flex-col items-start gap-y-6 px-6 text-white">
           <li>
-            <a href="#hero-section" className="hover:text-sky-500">
+            <a
+              href="#hero-section"
+              onClick={() => handleMenuClick("hero-section")}
+              className="hover:text-sky-500"
+            >
               Home
             </a>
           </li>
           <li>
-            <a href="#skills-section" className="hover:text-sky-500">
+            <a
+              href="#about-section"
+              onClick={() => handleMenuClick("about-section")}
+              className="hover:text-sky-500"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="#skills-section"
+              onClick={() => handleMenuClick("skills-section")}
+              className="hover:text-sky-500"
+            >
               Skills
             </a>
           </li>
           <li>
-            <a href="#projects-section" className="hover:text-sky-500">
+            <a
+              href="#projects-section"
+              onClick={() => handleMenuClick("projects-section")}
+              className="hover:text-sky-500"
+            >
               Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contacts-section" className="hover:text-sky-500">
-              Contact
             </a>
           </li>
         </ul>
