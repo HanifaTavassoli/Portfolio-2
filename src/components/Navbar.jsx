@@ -1,7 +1,7 @@
-import { useState } from "react";
 import logo from "../assets/img/logo.png";
+import { useState } from "react";
 function Navbar() {
-  const [openMenu, seOpenMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
   return (
     <>
       <nav
@@ -56,6 +56,7 @@ function Navbar() {
             id="open-menu"
             type="button"
             className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-100 cursor-pointer"
+            onClick={() => setOpenMenu(!openMenu)}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -78,7 +79,9 @@ function Navbar() {
       {/* <!-- Mobile menu panel (initially hidden) --> */}
       <div
         id="mobile-menu"
-        className="hidden fixed inset-0 z-50 bg-neutral-900/95 lg:hidden"
+        className={`fixed inset-0 z-50 bg-neutral-900/95 lg:hidden ${
+          openMenu ? "block" : "hidden"
+        }`}
         role="dialog"
         aria-modal="true"
       >
@@ -95,6 +98,7 @@ function Navbar() {
             id="close-menu"
             type="button"
             className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-100 cursor-pointer"
+            onClick={() => setOpenMenu(false)}
           >
             <span className="sr-only">Close menu</span>
             <svg
