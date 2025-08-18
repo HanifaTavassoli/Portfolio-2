@@ -2,6 +2,14 @@ import logo from "../assets/img/logo.png";
 import { useState } from "react";
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
+  const handleMenuClick = (sectionId) => {
+    setOpenMenu(false);
+
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <nav
