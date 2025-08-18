@@ -127,22 +127,38 @@ function Navbar() {
 
         <ul className="flex flex-col items-start gap-y-6 px-6 text-white">
           <li>
-            <a href="#hero-section" className="hover:text-sky-500">
+            <a
+              href="#hero-section"
+              onClick={() => handleMenuClick("hero-section")}
+              className="hover:text-sky-500"
+            >
               Home
             </a>
           </li>
           <li>
-            <a href="#about-section" className="hover:text-sky-500">
+            <a
+              href="#about-section"
+              onClick={() => handleMenuClick("about-section")}
+              className="hover:text-sky-500"
+            >
               About
             </a>
           </li>
           <li>
-            <a href="#skills-section" className="hover:text-sky-500">
+            <a
+              href="#skills-section"
+              onClick={() => handleMenuClick("skills-section")}
+              className="hover:text-sky-500"
+            >
               Skills
             </a>
           </li>
           <li>
-            <a href="#projects-section" className="hover:text-sky-500">
+            <a
+              href="#projects-section"
+              onClick={() => handleMenuClick("projects-section")}
+              className="hover:text-sky-500"
+            >
               Projects
             </a>
           </li>
