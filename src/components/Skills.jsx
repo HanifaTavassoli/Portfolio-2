@@ -1,4 +1,6 @@
-function Skills() {
+function Skills({ techStacks }) {
+  const stacks = Object.values(techStacks);
+
   return (
     <>
       <section
