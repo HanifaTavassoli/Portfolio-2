@@ -1,4 +1,14 @@
+import { useState } from "react";
+
 function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState([]);
+
   return (
     <>
       <section id="contacts-section" className="py-5 bg-neutral-800">
