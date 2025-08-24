@@ -36,6 +36,9 @@ function ContactForm() {
       return;
     }
 
+    setModalMessage(`Thank you, ${formData.name}! Your message was sent.`);
+    setIsModalOpen(true);
+
     setFormData({
       name: "",
       email: "",
