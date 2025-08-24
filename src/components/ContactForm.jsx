@@ -9,6 +9,11 @@ function ContactForm() {
   });
   const [errors, setErrors] = useState([]);
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
   return (
     <>
       <section id="contacts-section" className="py-5 bg-neutral-800">
