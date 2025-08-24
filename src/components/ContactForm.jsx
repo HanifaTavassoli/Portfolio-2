@@ -91,6 +91,10 @@ function ContactForm() {
                       placeholder="Full Name"
                       className="block w-full rounded-sm bg-neutral-800 px-3 py-1.5 text-neutral-400 placeholder:text-gray-400 shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
                     />
+                    {errors.length > 0 &&
+                      errors.includes("Name is required") && (
+                        <p className="text-red-500">Name is required</p>
+                      )}
                   </div>
                 </div>
                 <div className="sm:col-span-3">
@@ -104,6 +108,10 @@ function ContactForm() {
                       placeholder="Email"
                       className="block w-full rounded-sm bg-neutral-800 px-3 py-1.5 text-neutral-400 placeholder:text-gray-400 shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
                     />
+                    {errors.length > 0 &&
+                      errors.includes("Email is required") && (
+                        <p className="text-red-500">Email is required</p>
+                      )}
                   </div>
                 </div>
                 <div className="col-span-full">
@@ -117,6 +125,10 @@ function ContactForm() {
                       placeholder="Subject"
                       className="block w-full rounded-sm bg-neutral-800 px-3 py-1.5 text-neutral-400 placeholder:text-gray-400 shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
                     />
+                    {errors.length > 0 &&
+                      errors.includes("Subject is required") && (
+                        <p className="text-red-500">Subject is required</p>
+                      )}
                   </div>
                 </div>
                 <div className="col-span-full">
@@ -130,6 +142,10 @@ function ContactForm() {
                       placeholder="Message"
                       className="block w-full rounded-sm bg-neutral-800 px-3 py-1.5 text-neutral-400 placeholder:text-gray-400 shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
                     ></textarea>
+                    {errors.length > 0 &&
+                      errors.includes("Message is required") && (
+                        <p className="text-red-500">Message is required</p>
+                      )}
                   </div>
                 </div>
                 <div className="col-span-full mt-3">
