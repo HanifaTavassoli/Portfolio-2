@@ -14,6 +14,35 @@ function ContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let validationErrors = [];
+
+    if (!formData.name.trim()) validationErrors.push(`Name is required`);
+
+    if (!formData.email.trim()) validationErrors.push(`Email is required`);
+
+    if (!formData.subject.trim()) validationErrors.push(`Subject is required`);
+
+    if (!formData.message.trim())
+      validationErrors.push(`M
+      essage is required`);
+
+    if (validationErrors.length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+
+    setErrors([]);
+  };
+
   return (
     <>
       <section id="contacts-section" className="py-5 bg-neutral-800">
