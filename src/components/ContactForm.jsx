@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Modal from "./Modal";
 function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -169,6 +169,12 @@ function ContactForm() {
             </form>
           </div>
         </div>
+
+        <Modal
+          message={modalMessage}
+          isOpen={isModalOpen}
+          onClose={closeModal}
+        />
       </section>
     </>
   );
