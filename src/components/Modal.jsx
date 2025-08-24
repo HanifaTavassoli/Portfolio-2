@@ -1,4 +1,11 @@
+import { useEffect } from "react";
 function Modal({ message, isOpen, onClose }) {
+  useEffect(() => {
+    if (isOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
+  }, [isOpen]);
+
+  if (!isOpen) return null;
   return (
     <>
       <div
