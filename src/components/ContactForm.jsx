@@ -74,6 +74,74 @@ function ContactForm() {
                 </p>
               </div>
             </div>
+
+            <form
+              className="form w-full bg-neutral-900 md:basis-2/3 text-start text-white shadow shadow-sky-500/50"
+              onSubmit={handleSubmit}
+            >
+              <div className="p-6 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                <div className="sm:col-span-3">
+                  <div className="mt-2">
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      id="full-name"
+                      placeholder="Full Name"
+                      className="block w-full rounded-sm bg-neutral-800 px-3 py-1.5 text-neutral-400 placeholder:text-gray-400 shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
+                    />
+                  </div>
+                </div>
+                <div className="sm:col-span-3">
+                  <div className="mt-2">
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      id="email"
+                      placeholder="Email"
+                      className="block w-full rounded-sm bg-neutral-800 px-3 py-1.5 text-neutral-400 placeholder:text-gray-400 shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
+                    />
+                  </div>
+                </div>
+                <div className="col-span-full">
+                  <div className="mt-2">
+                    <input
+                      type="text"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      id="subject"
+                      placeholder="Subject"
+                      className="block w-full rounded-sm bg-neutral-800 px-3 py-1.5 text-neutral-400 placeholder:text-gray-400 shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
+                    />
+                  </div>
+                </div>
+                <div className="col-span-full">
+                  <div className="mt-2">
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      id="message"
+                      rows="5"
+                      placeholder="Message"
+                      className="block w-full rounded-sm bg-neutral-800 px-3 py-1.5 text-neutral-400 placeholder:text-gray-400 shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
+                    ></textarea>
+                  </div>
+                </div>
+                <div className="col-span-full mt-3">
+                  <button
+                    type="submit"
+                    className="w-full py-4 sm:w-25 rounded-sm bg-slate-800 text-sky-500 px-10 sm:py-2 text-lg sm:text-sm font-semibold shadow-xs hover:bg-slate-700 hover:cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+                  >
+                    Send
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>
