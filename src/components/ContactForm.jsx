@@ -27,9 +27,7 @@ function ContactForm() {
 
     if (!formData.subject.trim()) validationErrors.push(`Subject is required`);
 
-    if (!formData.message.trim())
-      validationErrors.push(`M
-      essage is required`);
+    if (!formData.message.trim()) validationErrors.push(`Message is required`);
 
     if (validationErrors.length > 0) {
       setErrors(validationErrors);
