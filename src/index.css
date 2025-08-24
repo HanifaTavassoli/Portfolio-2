@@ -37,3 +37,8 @@
     animation: modal-in 0.5s ease-in-out forwards;
   }
 }
+
+.custom-opacity {
+  background-color: #111 !important;
+  opacity: 0.85 !important;
+}
