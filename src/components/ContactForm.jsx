@@ -49,6 +49,9 @@ function ContactForm() {
     setErrors([]);
   };
 
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <>
       <section id="contacts-section" className="py-5 bg-neutral-800">
