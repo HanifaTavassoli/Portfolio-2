@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "./Modal";
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -8,9 +8,30 @@ function ContactForm() {
     message: "",
   });
   const [errors, setErrors] = useState([]);
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
+  const [isDirty, setIsDirty] = useState(false); // For unsent message hint
+
+  // Pre-fill the form if there is data in localStorage
+  useEffect(() => {
+    const savedData = localStorage.getItem("data");
+    if (savedData) {
+      setFormData(JSON.parse(savedData));
+      setIsDirty(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (
+      formData.name ||
+      formData.email ||
+      formData.subject ||
+      formData.message
+    ) {
+      localStorage.setItem("data", JSON.stringify(formData));
+      setIsDirty(true);
+    }
+  }, [formData]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -45,6 +66,8 @@ function ContactForm() {
     });
 
     setErrors([]);
+    localStorage.removeItem("data");
+    setIsDirty(false);
   };
 
   const closeModal = () => {
@@ -58,34 +81,16 @@ function ContactForm() {
             Contact Me
           </h3>
           <div className="flex flex-col md:flex-row gap-10 justify-center items-start md:items-center w-full px-4">
-            <div className="w-full md:basis-1/3 flex flex-col gap-10">
-              <div className="flex gap-6 items-start">
-                <i className="fa-duotone fa-solid fa-phone text-xl p-6 rounded-sm bg-sky-800"></i>
-                <p className="flex flex-col text-start gap-2">
-                  <span className="font-bold text-xl">Phone Number</span>
-                  <span>+93 (0)781372682</span>
-                </p>
-              </div>
-              <div className="flex gap-8">
-                <i className="fa-solid fa-envelope text-xl p-6 rounded-sm bg-sky-800"></i>
-                <p className="flex flex-col text-start gap-2 text-wrap">
-                  <span className="font-bold text-xl">Email</span>
-                  <span className="text-wrap">hanifatavassoli@gmail.com</span>
-                </p>
-              </div>
-              <div className="flex gap-8">
-                <i className="fa-solid fa-home text-xl p-6 rounded-sm bg-sky-800"></i>
-                <p className="flex flex-col text-start gap-2">
-                  <span className="font-bold text-xl">Location</span>
-                  <span>Herat, Afghanistan</span>
-                </p>
-              </div>
-            </div>
-
+            {/* Form Section */}
             <form
-              className="form w-full bg-neutral-900 md:basis-2/3 text-start text-white shadow shadow-sky-500/50"
+              className="form w-full bg-neutral-900 md:basis-2/3 text-start text-white shadow-lg rounded-lg shadow-sky-800/50 transform transition-transform duration-500 hover:scale-105"
               onSubmit={handleSubmit}
             >
+              {isDirty && (
+                <p className="mt-3 text-sky-500 text-center">
+                  You have unsent message data saved!
+                </p>
+              )}
               <div className="p-6 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 <div className="sm:col-span-3">
                   <div className="mt-2">
@@ -165,9 +170,48 @@ function ContactForm() {
                 </div>
               </div>
             </form>
+
+            {/* Live Preview Section */}
+            <div className="w-full md:basis-1/3 p-8 bg-neutral-900 rounded-lg shadow-lg shadow-sky-800/50 transform transition-transform duration-500 hover:scale-105">
+              <h2 className="text-2xl font-bold mb-8 text-center text-white">
+                Live Preview
+              </h2>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-lg  text-sky-400">Name:</span>
+                  <span className="text-neutral-100 ">
+                    {formData.name || "Your Name"}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-lg text-sky-400">Email:</span>
+                  <span className="text-neutral-100">
+                    {formData.email || "Your Email"}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-lg text-sky-400">Subject:</span>
+                  <span className="text-neutral-100">
+                    {formData.subject || "Your Subject"}
+                  </span>
+                </div>
+                <div className="flex justify-between items-start">
+                  <span className="text-lg  text-sky-400">Message:</span>
+                  <p className="text-neutral-100  max-w-full break-words">
+                    {formData.message || "Your Message"}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6 text-sm text-gray-300 text-center">
+                <p className="italic">
+                  * This is how your message will look when submitted
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
+        {/* Modal */}
         <Modal
           message={modalMessage}
           isOpen={isModalOpen}

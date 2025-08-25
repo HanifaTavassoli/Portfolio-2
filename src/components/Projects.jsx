@@ -2,6 +2,7 @@ import Card from "./Card";
 import omnifood from "../assets/img/Projects/omnifood.png";
 import portfolio from "../assets/img/Projects/portfolio.png";
 import natours from "../assets/img/Projects/natours.png";
+import calculator from "../assets/img/Projects/calculator.png";
 import travana from "../assets/img/Projects/travana.png";
 import furnivo from "../assets/img/Projects/furnivo-homepage.png";
 
@@ -14,7 +15,7 @@ function Projects({ techStacks }) {
       codeLink: "https://github.com/HanifaTavassoli/Omnifood",
       liveUrl: "https://hanifa-omnifood.netlify.app",
       featured: true,
-      stacks: [techStacks.html, techStacks.css, techStacks.js],
+      stacks: [techStacks.css, techStacks.js],
     },
     {
       name: "portfolio",
@@ -24,7 +25,7 @@ function Projects({ techStacks }) {
       codeLink: "https://github.com/HanifaTavassoli/Portfolio",
       liveUrl: "https://hanifatavassoli-portfolio.netlify.app",
       featured: true,
-      stacks: [techStacks.html, techStacks.css, techStacks.tailwind],
+      stacks: [techStacks.css, techStacks.tailwind],
     },
     {
       name: "Natours",
@@ -34,7 +35,17 @@ function Projects({ techStacks }) {
       codeLink: "https://github.com/HanifaTavassoli/Natours",
       liveUrl: "https://hanifa-natours.netlify.app",
       featured: true,
-      stacks: [techStacks.html, techStacks.css, techStacks.sass, techStacks.js],
+      stacks: [techStacks.css, techStacks.sass, techStacks.js],
+    },
+    {
+      name: "Calculator",
+      image: calculator,
+      description:
+        "calculator app with a user-friendly interface for quick calculations.",
+      codeLink: "https://github.com/HanifaTavassoli/Calculator",
+      liveUrl: "https://hanifatavassoli-calculator.vercel.app",
+      featured: true,
+      stacks: [techStacks.css, techStacks.react],
     },
     {
       name: "Furnivo",
