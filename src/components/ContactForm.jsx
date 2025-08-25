@@ -11,6 +11,15 @@ function ContactForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
   const [isDirty, setIsDirty] = useState(false);
+
+  useEffect(() => {
+    const savedData = localStorage.getItem("data");
+    if (savedData) {
+      setFormData(JSON.parse(savedData));
+      setIsDirty(true);
+    }
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
