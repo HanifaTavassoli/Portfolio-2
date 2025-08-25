@@ -66,6 +66,8 @@ function ContactForm() {
     });
 
     setErrors([]);
+    localStorage.removeItem("data");
+    setIsDirty(false);
   };
 
   const closeModal = () => {
