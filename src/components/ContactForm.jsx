@@ -21,6 +21,18 @@ function ContactForm() {
     }
   }, []);
 
+  useEffect(() => {
+    if (
+      formData.name ||
+      formData.email ||
+      formData.subject ||
+      formData.message
+    ) {
+      localStorage.setItem("data", JSON.stringify(formData));
+      setIsDirty(true);
+    }
+  }, [formData]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
