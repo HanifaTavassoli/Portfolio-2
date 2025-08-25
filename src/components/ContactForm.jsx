@@ -109,6 +109,11 @@ function ContactForm() {
               className="form w-full bg-neutral-900 md:basis-2/3 text-start text-white shadow shadow-sky-500/50"
               onSubmit={handleSubmit}
             >
+              {isDirty && (
+                <p className="mt-3 text-sky-500 text-center">
+                  You have unsent message data saved!
+                </p>
+              )}
               <div className="p-6 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 <div className="sm:col-span-3">
                   <div className="mt-2">
