@@ -179,19 +179,27 @@ function ContactForm() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-lg  text-sky-400">Name:</span>
-                  <span className="text-neutral-100 "></span>
+                  <span className="text-neutral-100 ">
+                    {formData.name || "Your Name"}
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-lg text-sky-400">Email:</span>
-                  <span className="text-neutral-100"></span>
+                  <span className="text-neutral-100">
+                    {formData.email || "Your Email"}
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-lg text-sky-400">Subject:</span>
-                  <span className="text-neutral-100"></span>
+                  <span className="text-neutral-100">
+                    {formData.subject || "Your Subject"}
+                  </span>
                 </div>
                 <div className="flex justify-between items-start">
                   <span className="text-lg  text-sky-400">Message:</span>
-                  <p className="text-neutral-100  max-w-full break-words"></p>
+                  <p className="text-neutral-100  max-w-full break-words">
+                    {formData.message || "Your Message"}
+                  </p>
                 </div>
               </div>
               <div className="mt-6 text-sm text-gray-300 text-center">
