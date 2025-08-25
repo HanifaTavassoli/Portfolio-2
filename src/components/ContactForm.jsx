@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "./Modal";
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -8,10 +8,9 @@ function ContactForm() {
     message: "",
   });
   const [errors, setErrors] = useState([]);
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
-
+  const [isDirty, setIsDirty] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
