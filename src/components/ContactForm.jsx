@@ -60,21 +60,21 @@ function ContactForm() {
           <div className="flex flex-col md:flex-row gap-10 justify-center items-start md:items-center w-full px-4">
             <div className="w-full md:basis-1/3 flex flex-col gap-10">
               <div className="flex gap-6 items-start">
-                <i className="bi-duotone bi-solid bi-phone text-xl p-6 rounded-sm bg-sky-800"></i>
+                <i className="bi-duotone bi-solid bi-phone text-xl px-6 py-5 rounded-sm bg-sky-800"></i>
                 <p className="flex flex-col text-start gap-2">
                   <span className="font-bold text-xl">Phone Number</span>
                   <span>+93 (0)781372682</span>
                 </p>
               </div>
               <div className="flex gap-8">
-                <i className="bi-solid bi-envelope text-xl p-6 rounded-sm bg-sky-800"></i>
+                <i className="bi-solid bi-envelope text-xl px-6 py-5 rounded-sm bg-sky-800"></i>
                 <p className="flex flex-col text-start gap-2 text-wrap">
                   <span className="font-bold text-xl">Email</span>
                   <span className="text-wrap">hanifatavassoli@gmail.com</span>
                 </p>
               </div>
               <div className="flex gap-8">
-                <i className="bi-solid bi-house text-xl p-6 rounded-sm bg-sky-800"></i>
+                <i className="bi-solid bi-house text-xl px-6 py-5  rounded-sm bg-sky-800"></i>
                 <p className="flex flex-col text-start gap-2">
                   <span className="font-bold text-xl">Location</span>
                   <span>Herat, Afghanistan</span>
