@@ -15,7 +15,7 @@ function Projects({ techStacks }) {
       codeLink: "https://github.com/HanifaTavassoli/Omnifood",
       liveUrl: "https://hanifa-omnifood.netlify.app",
       featured: true,
-      stacks: [techStacks.html, techStacks.css, techStacks.js],
+      stacks: [techStacks.css, techStacks.js],
     },
     {
       name: "portfolio",
@@ -25,7 +25,7 @@ function Projects({ techStacks }) {
       codeLink: "https://github.com/HanifaTavassoli/Portfolio",
       liveUrl: "https://hanifatavassoli-portfolio.netlify.app",
       featured: true,
-      stacks: [techStacks.html, techStacks.css, techStacks.tailwind],
+      stacks: [techStacks.css, techStacks.tailwind],
     },
     {
       name: "Natours",
@@ -35,7 +35,7 @@ function Projects({ techStacks }) {
       codeLink: "https://github.com/HanifaTavassoli/Natours",
       liveUrl: "https://hanifa-natours.netlify.app",
       featured: true,
-      stacks: [techStacks.html, techStacks.css, techStacks.sass, techStacks.js],
+      stacks: [techStacks.css, techStacks.sass, techStacks.js],
     },
     {
       name: "Calculator",
