@@ -81,32 +81,9 @@ function ContactForm() {
             Contact Me
           </h3>
           <div className="flex flex-col md:flex-row gap-10 justify-center items-start md:items-center w-full px-4">
-            <div className="w-full md:basis-1/3 flex flex-col gap-10">
-              <div className="flex gap-6 items-start">
-                <i className="bi-duotone bi-solid bi-phone text-xl px-6 py-5 rounded-sm bg-sky-800"></i>
-                <p className="flex flex-col text-start gap-2">
-                  <span className="font-bold text-xl">Phone Number</span>
-                  <span>+93 (0)781372682</span>
-                </p>
-              </div>
-              <div className="flex gap-8">
-                <i className="bi-solid bi-envelope text-xl px-6 py-5 rounded-sm bg-sky-800"></i>
-                <p className="flex flex-col text-start gap-2 text-wrap">
-                  <span className="font-bold text-xl">Email</span>
-                  <span className="text-wrap">hanifatavassoli@gmail.com</span>
-                </p>
-              </div>
-              <div className="flex gap-8">
-                <i className="bi-solid bi-house text-xl px-6 py-5  rounded-sm bg-sky-800"></i>
-                <p className="flex flex-col text-start gap-2">
-                  <span className="font-bold text-xl">Location</span>
-                  <span>Herat, Afghanistan</span>
-                </p>
-              </div>
-            </div>
-
+            {/* Form Section */}
             <form
-              className="form w-full bg-neutral-900 md:basis-2/3 text-start text-white shadow shadow-sky-500/50"
+              className="form w-full bg-neutral-900 md:basis-2/3 text-start text-white shadow-lg rounded-lg shadow-sky-800/50 transform transition-transform duration-500 hover:scale-105"
               onSubmit={handleSubmit}
             >
               {isDirty && (
@@ -193,9 +170,40 @@ function ContactForm() {
                 </div>
               </div>
             </form>
+
+            {/* Live Preview Section */}
+            <div className="w-full md:basis-1/3 p-8 bg-neutral-900 rounded-lg shadow-lg shadow-sky-800/50 transform transition-transform duration-500 hover:scale-105">
+              <h2 className="text-2xl font-bold mb-8 text-center text-white">
+                Live Preview
+              </h2>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-lg  text-sky-400">Name:</span>
+                  <span className="text-neutral-100 "></span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-lg text-sky-400">Email:</span>
+                  <span className="text-neutral-100"></span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-lg text-sky-400">Subject:</span>
+                  <span className="text-neutral-100"></span>
+                </div>
+                <div className="flex justify-between items-start">
+                  <span className="text-lg  text-sky-400">Message:</span>
+                  <p className="text-neutral-100  max-w-full break-words"></p>
+                </div>
+              </div>
+              <div className="mt-6 text-sm text-gray-300 text-center">
+                <p className="italic">
+                  * This is how your message will look when submitted
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
+        {/* Modal */}
         <Modal
           message={modalMessage}
           isOpen={isModalOpen}
