@@ -10,8 +10,9 @@ function ContactForm() {
   const [errors, setErrors] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
-  const [isDirty, setIsDirty] = useState(false);
+  const [isDirty, setIsDirty] = useState(false); // For unsent message hint
 
+  // Pre-fill the form if there is data in localStorage
   useEffect(() => {
     const savedData = localStorage.getItem("data");
     if (savedData) {
