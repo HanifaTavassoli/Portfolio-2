@@ -1,4 +1,5 @@
-function Skills({ techStacks }) {
+import { techStacks } from "../data";
+function Skills() {
   const stacks = Object.values(techStacks);
 
   return (
