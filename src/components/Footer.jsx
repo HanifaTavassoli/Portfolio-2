@@ -1,15 +1,10 @@
-import logo from "../assets/img/logo.png";
-function Footer() {
+function Footer({ isDark }) {
   return (
-    <footer className="bg-neutral-950 py-16">
-      <div className="custom-container grid grid-rows-3 gap-3 justify-items-center text-white text-center">
+    <footer className="bg-gray-200 text-neutral-800 dark:bg-neutral-800 dark:text-white py-16">
+      <div className="custom-container grid grid-rows-3 gap-3 justify-items-center  text-center">
         <div>
           <a href="#">
-            <img
-              src={logo}
-              alt="logo"
-              className="h-16 rounded-full border-2 border-neutral-950"
-            />
+            <img src="" alt="logo" className="h-16 rounded-full" />
           </a>
         </div>
         <ul className="flex gap-5 items-center">
