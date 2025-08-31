@@ -5,7 +5,10 @@ function Projects() {
   const myprojects = projects;
 
   return (
-    <section id="projects-section" className="py-20 mt-5 bg-neutral-800">
+    <section
+      id="projects-section"
+      className="py-20 mt-5 bg-gray-200 text-black dark:bg-neutral-800 dark:text-white"
+    >
       <div className="custom-container py-5 px-4 text-center mx-auto">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-[48px]">
           My Projects
