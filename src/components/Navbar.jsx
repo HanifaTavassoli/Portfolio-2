@@ -66,7 +66,7 @@ function Navbar({ isDark, toggleTheme }) {
           </ul>
         </div>
         {/* <!-- Mobile menu toggle button --> */}
-        <div className="flex items-center w-full px-4 py-2 lg:hidden bg-gray-100 text-black dark:bg-neutral-900 dark:text-white fixed top-0 justify-between">
+        <div className="flex items-center w-full px-4 py-2 lg:hidden bg-gray-100/50 text-black dark:bg-neutral-900/50 dark:text-white fixed top-0 justify-between">
           <a href="#">
             <span className="sr-only">Hanifa Tavassoli</span>
             <img
@@ -78,7 +78,7 @@ function Navbar({ isDark, toggleTheme }) {
           <button
             id="open-menu"
             type="button"
-            className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-100 cursor-pointer"
+            className="inline-flex items-center justify-center rounded-md p-2.5 cursor-pointer"
             onClick={() => setOpenMenu(!openMenu)}
           >
             <span className="sr-only">Open main menu</span>
@@ -102,7 +102,7 @@ function Navbar({ isDark, toggleTheme }) {
       {/* <!-- Mobile menu panel (initially hidden) --> */}
       <div
         id="mobile-menu"
-        className={`fixed inset-0 z-50 bg-neutral-900/95 lg:hidden ${
+        className={`fixed inset-0 z-50 bg-gray-200/90 text-black dark:bg-neutral-900/90 dark:text-white  lg:hidden ${
           openMenu ? "block" : "hidden"
         }`}
         role="dialog"
@@ -120,7 +120,7 @@ function Navbar({ isDark, toggleTheme }) {
           <button
             id="close-menu"
             type="button"
-            className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-100 cursor-pointer"
+            className="inline-flex items-center justify-center rounded-md p-2.5 cursor-pointer"
             onClick={() => setOpenMenu(false)}
           >
             <span className="sr-only">Close menu</span>
@@ -140,7 +140,7 @@ function Navbar({ isDark, toggleTheme }) {
           </button>
         </div>
 
-        <ul className="flex flex-col items-start gap-y-6 px-6 text-white">
+        <ul className="flex flex-col items-start gap-y-6 px-6">
           <li>
             <a
               href="#hero-section"
@@ -176,6 +176,18 @@ function Navbar({ isDark, toggleTheme }) {
             >
               Projects
             </a>
+          </li>
+          <li>
+            <button
+              className="px-4 py-2 rounded-lg cursor-pointer bg-gray-300  text-neutral-900 dark:bg-neutral-700 dark:text-gray-100 transition-colors duration-300"
+              onClick={toggleTheme}
+            >
+              <i
+                className={`bi ${
+                  isDark ? "bi-moon-stars" : "bi-brightness-high"
+                } `}
+              ></i>
+            </button>
           </li>
         </ul>
       </div>
