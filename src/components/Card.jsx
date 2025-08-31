@@ -9,7 +9,7 @@ function Card({
 }) {
   return (
     <>
-      <div className="bg-neutral-900/50 rounded-sm overflow-hidden w-full max-w-[320px]">
+      <div className="bg-gray-100 text-black dark:bg-neutral-900 dark:text-white rounded-sm overflow-hidden w-full max-w-[320px]">
         <a href={liveUrl} className="">
           <img
             src={image}

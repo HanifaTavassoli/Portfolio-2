@@ -1,7 +1,10 @@
-import logo from "../assets/img/logo.png";
+import darkLogo from "../assets/img/dark_logo.png";
+import lightLogo from "../assets/img/light_logo.png";
 import { useState } from "react";
-function Navbar() {
+
+function Navbar({ isDark, toggleTheme }) {
   const [openMenu, setOpenMenu] = useState(false);
+
   const handleMenuClick = (sectionId) => {
     setOpenMenu(false);
 
@@ -13,16 +16,16 @@ function Navbar() {
   return (
     <>
       <nav
-        className="mx-auto flex items-center justify-around py-2 lg:shadow-md lg:shadow-sky-500/50 bg-neutral-950 w-full lg:fixed lg:top-0"
+        className="mx-auto flex items-center justify-around py-2 lg:shadow-md lg:shadow-sky-500/50 bg-gray-100 text-black dark:bg-neutral-900 dark:text-white w-full lg:fixed lg:top-0"
         aria-label="Global"
       >
-        <div className="hidden lg:flex bg-neutral-950">
+        <div className="hidden lg:flex">
           <a href="#">
             <span className="sr-only">Hanifa Tavassoli</span>
             <img
-              src={logo}
+              src={isDark ? darkLogo : lightLogo}
               alt="logo"
-              className="h-12 w-auto rounded-full border-2 border-neutral-950"
+              className="h-12 w-auto"
             />
           </a>
         </div>
@@ -48,16 +51,28 @@ function Navbar() {
                 Projects
               </a>
             </li>
+            <li>
+              <button
+                className="px-4 py-2 rounded-lg cursor-pointer bg-gray-300  text-neutral-900 dark:bg-neutral-700 dark:text-gray-100 transition-colors duration-300"
+                onClick={toggleTheme}
+              >
+                <i
+                  className={`bi ${
+                    isDark ? "bi-moon-stars" : "bi-brightness-high"
+                  } `}
+                ></i>
+              </button>
+            </li>
           </ul>
         </div>
         {/* <!-- Mobile menu toggle button --> */}
-        <div className="flex items-center w-full px-4 py-2 lg:hidden bg-neutral-950 fixed top-0 justify-between">
+        <div className="flex items-center w-full px-4 py-2 lg:hidden bg-gray-100 text-black dark:bg-neutral-900 dark:text-white fixed top-0 justify-between">
           <a href="#">
             <span className="sr-only">Hanifa Tavassoli</span>
             <img
-              src={logo}
+              src={isDark ? darkLogo : lightLogo}
               alt="logo"
-              className="h-12 w-auto rounded-full border-2 border-neutral-950"
+              className="h-12 w-auto"
             />
           </a>
           <button
@@ -97,9 +112,9 @@ function Navbar() {
           <a href="#">
             <span className="sr-only">Hanifa Tavassoli</span>
             <img
-              src={logo}
+              src={isDark ? darkLogo : lightLogo}
               alt="logo"
-              className="h-12 w-auto rounded-full border-2 border-neutral-950"
+              className="h-12 w-auto"
             />
           </a>
           <button

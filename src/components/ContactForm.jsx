@@ -75,7 +75,10 @@ function ContactForm() {
   };
   return (
     <>
-      <section id="contacts-section" className="py-5 bg-neutral-800">
+      <section
+        id="contacts-section"
+        className="py-5 bg-gray-100 text-black dark:bg-neutral-900 dark:text-white"
+      >
         <div className="custom-container py-20 mx-auto text-center">
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-10">
             Contact Me
@@ -83,7 +86,7 @@ function ContactForm() {
           <div className="flex flex-col md:flex-row gap-10 justify-center items-start md:items-center w-full px-4">
             {/* Form Section */}
             <form
-              className="form w-full bg-neutral-900 md:basis-2/3 text-start text-white shadow-lg rounded-lg shadow-sky-800/50 transform transition-transform duration-500 hover:scale-105"
+              className="form w-full  bg-gray-200/50 dark:bg-neutral-800 md:basis-2/3 text-start text-white shadow-md rounded-lg shadow-sky-500/50 transform transition-transform duration-500 hover:scale-105"
               onSubmit={handleSubmit}
             >
               {isDirty && (
@@ -101,7 +104,7 @@ function ContactForm() {
                       onChange={handleChange}
                       id="full-name"
                       placeholder="Full Name"
-                      className="block w-full rounded-sm bg-neutral-800 px-3 py-1.5 text-neutral-400 placeholder:text-gray-400 shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
+                      className="block w-full rounded-sm bg-gray-300/50 dark:bg-neutral-900 px-3 py-1.5 text-neutral-800 dark:text-gray-300 placeholder:text-neutral-800 dark:placeholder:text-gray-300  shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
                     />
                     {errors.length > 0 &&
                       errors.includes("Name is required") && (
@@ -118,7 +121,7 @@ function ContactForm() {
                       onChange={handleChange}
                       id="email"
                       placeholder="Email"
-                      className="block w-full rounded-sm bg-neutral-800 px-3 py-1.5 text-neutral-400 placeholder:text-gray-400 shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
+                      className="block w-full rounded-sm bg-gray-300/50 dark:bg-neutral-900 px-3 py-1.5 text-neutral-800 dark:text-gray-300 placeholder:text-neutral-800 dark:placeholder:text-gray-300 shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
                     />
                     {errors.length > 0 &&
                       errors.includes("Email is required") && (
@@ -135,7 +138,7 @@ function ContactForm() {
                       onChange={handleChange}
                       id="subject"
                       placeholder="Subject"
-                      className="block w-full rounded-sm bg-neutral-800 px-3 py-1.5 text-neutral-400 placeholder:text-gray-400 shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
+                      className="block w-full rounded-sm bg-gray-300/50 dark:bg-neutral-900 px-3 py-1.5 text-neutral-800 dark:text-gray-300 placeholder:text-neutral-800 dark:placeholder:text-gray-300 shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
                     />
                     {errors.length > 0 &&
                       errors.includes("Subject is required") && (
@@ -152,7 +155,7 @@ function ContactForm() {
                       id="message"
                       rows="5"
                       placeholder="Message"
-                      className="block w-full rounded-sm bg-neutral-800 px-3 py-1.5 text-neutral-400 placeholder:text-gray-400 shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
+                      className="block w-full rounded-sm bg-gray-300/50 dark:bg-neutral-900 px-3 py-1.5 text-neutral-800 dark:text-gray-300 placeholder:text-neutral-800 dark:placeholder:text-gray-300 shadow-sky-500/50 focus:shadow-[0_0_10px_1px] focus:border focus:border-sky-500 outline-none sm:text-sm/6 transition-shadow duration-200"
                     ></textarea>
                     {errors.length > 0 &&
                       errors.includes("Message is required") && (
@@ -172,37 +175,31 @@ function ContactForm() {
             </form>
 
             {/* Live Preview Section */}
-            <div className="w-full md:basis-1/3 p-8 bg-neutral-900 rounded-lg shadow-lg shadow-sky-800/50 transform transition-transform duration-500 hover:scale-105">
-              <h2 className="text-2xl font-bold mb-8 text-center text-white">
+            <div className="w-full md:basis-1/3 p-8 bg-gray-200/50 dark:bg-neutral-800 rounded-lg shadow-md shadow-sky-500/50 transform transition-transform duration-500 hover:scale-105">
+              <h2 className="text-2xl font-bold mb-8 text-center ">
                 Live Preview
               </h2>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-lg  text-sky-400">Name:</span>
-                  <span className="text-neutral-100 ">
-                    {formData.name || "Your Name"}
-                  </span>
+                  <span className=" ">{formData.name || "Your Name"}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-lg text-sky-400">Email:</span>
-                  <span className="text-neutral-100">
-                    {formData.email || "Your Email"}
-                  </span>
+                  <span className="">{formData.email || "Your Email"}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-lg text-sky-400">Subject:</span>
-                  <span className="text-neutral-100">
-                    {formData.subject || "Your Subject"}
-                  </span>
+                  <span className="">{formData.subject || "Your Subject"}</span>
                 </div>
                 <div className="flex justify-between items-start">
                   <span className="text-lg  text-sky-400">Message:</span>
-                  <p className="text-neutral-100  max-w-full break-words">
+                  <p className=" max-w-full break-words">
                     {formData.message || "Your Message"}
                   </p>
                 </div>
               </div>
-              <div className="mt-6 text-sm text-gray-300 text-center">
+              <div className="mt-6 text-sm  text-center">
                 <p className="italic">
                   * This is how your message will look when submitted
                 </p>
