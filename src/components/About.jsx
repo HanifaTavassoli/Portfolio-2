@@ -5,7 +5,10 @@ function About({ animation }) {
     setShowMore((showMore) => !showMore);
   };
   return (
-    <section className="py-20 bg-neutral-800  " id="about-section">
+    <section
+      className="py-20 bg-gray-300 text-black dark:bg-neutral-950 dark:text-white"
+      id="about-section"
+    >
       <div className="custom-container py-5">
         <div className="flex flex-col md:flex-row gap-10">
           <img
