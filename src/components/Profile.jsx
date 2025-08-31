@@ -1,3 +1,5 @@
+import { TypeAnimation } from "react-type-animation";
+
 export function Profile({ profile, name, message, title }) {
   return (
     <>
@@ -12,8 +14,14 @@ export function Profile({ profile, name, message, title }) {
           <span className="text-sky-500 mx-2">{name}</span>
           {message}
         </h3>
-        <h1 className=" text-2xl  mb-10 sm:text-3xl md:text-4xl font-bold">
-          {title}
+        <h1 className=" text-2xl  my-5 sm:text-3xl md:text-5xl font-bold">
+          <TypeAnimation
+            sequence={[title, 2000, "", 1000]}
+            speed={50}
+            wrapper="span"
+            repeat={Infinity}
+            style={{ display: "inline-block" }}
+          />
         </h1>
       </div>
     </>
