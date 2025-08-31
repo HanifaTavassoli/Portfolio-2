@@ -24,7 +24,7 @@ function Header({ message }) {
     <>
       <header
         id="hero-section"
-        className="min-h-screen flex items-center justify-center px-4 py-10 sm:px-6"
+        className="min-h-screen flex items-center justify-center px-4 py-10 sm:px-6 bg-gray-200 text-black dark:bg-neutral-800 dark:text-white"
       >
         <div className="custom-container w-full max-w-2xl mx-auto text-center">
           <Profile
@@ -83,7 +83,7 @@ function Header({ message }) {
               </span>
             </a>
           </div>
-          <div className="text-neutral-200 italic text-sm sm:text-base">
+          <div className=" italic text-sm sm:text-base">
             <p>"{quote}"</p>
           </div>
         </div>
