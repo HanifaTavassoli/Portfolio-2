@@ -1,4 +1,5 @@
 import omnifood from "./assets/img/Projects/omnifood.png";
+import numGuesser from "./assets/img/Projects/number-guesser.png";
 import portfolio from "./assets/img/Projects/portfolio.png";
 import natours from "./assets/img/Projects/natours.png";
 import calculator from "./assets/img/Projects/calculator.png";
@@ -38,6 +39,15 @@ export const projects = [
     codeLink: "https://github.com/HanifaTavassoli/Omnifood",
     liveUrl: "https://hanifa-omnifood.netlify.app",
     featured: true,
+    stacks: [techStacks.css, techStacks.js],
+  },
+  {
+    name: "Number Guesser Game",
+    image: numGuesser,
+    description: "A tiny HTML, CSS ans javascript number guesser game",
+    codeLink: "https://github.com/HanifaTavassoli/number-guesser-game",
+    liveUrl: "https://hanifa-guess-number.netlify.app",
+    featured: false,
     stacks: [techStacks.css, techStacks.js],
   },
   {
