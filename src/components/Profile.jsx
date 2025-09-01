@@ -15,7 +15,8 @@ export function Profile({ profile, name, message, title }) {
           {message}
         </h3>
 
-        <h1 className=" text-2xl  my-5 sm:text-3xl md:text-5xl font-bold">
+        <h1 className=" text-2xl text-neutral-800 dark:text-gray-200  my-5 sm:text-3xl md:text-5xl font-bold">
+
           <TypeAnimation
             sequence={[title, 2000, "", 1000]}
             speed={50}
