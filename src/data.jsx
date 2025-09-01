@@ -2,6 +2,7 @@ import omnifood from "./assets/img/Projects/omnifood.png";
 import portfolio from "./assets/img/Projects/portfolio.png";
 import natours from "./assets/img/Projects/natours.png";
 import calculator from "./assets/img/Projects/calculator.png";
+import mortgageCalc from "./assets/img/Projects/mortgage-calculator.jpg";
 import travana from "./assets/img/Projects/travana.png";
 import furnivo from "./assets/img/Projects/furnivo-homepage.png";
 
@@ -66,6 +67,15 @@ export const projects = [
       "calculator app with a user-friendly interface for quick calculations.",
     codeLink: "https://github.com/HanifaTavassoli/Calculator",
     liveUrl: "https://hanifatavassoli-calculator.vercel.app",
+    featured: true,
+    stacks: [techStacks.css, techStacks.react],
+  },
+  {
+    name: "Mortgage Calculator",
+    image: mortgageCalc,
+    description: "Simple Mortgage Calculator for monthly and total repayments.",
+    codeLink: "https://github.com/HanifaTavassoli/mortgage-calculator",
+    liveUrl: "https://hanifatavassoli-mortgage-calculator.vercel.app",
     featured: true,
     stacks: [techStacks.css, techStacks.react],
   },
