@@ -27,6 +27,8 @@ function Projects() {
           My Projects
         </h2>
 
+        <ProjectFilterBar techs={techs} />
+
         <div className="grid gap-x-0 md:gap-x-8 gap-y-8 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center mx-auto">
           {filteredProj.length == 0 ? (
             <div className="col-span-full text-left text-black dark:text-white w-full mx-auto">
