@@ -15,6 +15,8 @@ function Projects() {
     "wordpress",
   ];
 
+  const [filteredProj, setFilteredProj] = useState(projects);
+
   return (
     <section
       id="projects-section"
@@ -26,9 +28,15 @@ function Projects() {
         </h2>
 
         <div className="grid gap-x-0 md:gap-x-8 gap-y-8 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center mx-auto">
-          {projects.map((projects) => (
-            <Card {...projects} />
-          ))}
+          {filteredProj.length == 0 ? (
+            <div className="col-span-full text-left text-black dark:text-white w-full mx-auto">
+              <p className="text-3xl font-semibold py-8 px-6 bg-gray-100 dark:bg-neutral-700 border-l-8 border-sky-500/50 shadow-sm rounded-lg">
+                No projects found
+              </p>
+            </div>
+          ) : (
+            filteredProj.map((project) => <Card {...project} />)
+          )}
         </div>
       </div>
     </section>
