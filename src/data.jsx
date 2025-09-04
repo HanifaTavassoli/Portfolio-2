@@ -1,7 +1,9 @@
 import omnifood from "./assets/img/Projects/omnifood.png";
+import numGuesser from "./assets/img/Projects/number-guesser.png";
 import portfolio from "./assets/img/Projects/portfolio.png";
 import natours from "./assets/img/Projects/natours.png";
 import calculator from "./assets/img/Projects/calculator.png";
+import mortgageCalc from "./assets/img/Projects/mortgage-calculator.jpg";
 import travana from "./assets/img/Projects/travana.png";
 import furnivo from "./assets/img/Projects/furnivo-homepage.png";
 
@@ -37,7 +39,16 @@ export const projects = [
     codeLink: "https://github.com/HanifaTavassoli/Omnifood",
     liveUrl: "https://hanifa-omnifood.netlify.app",
     featured: true,
-    stacks: [techStacks.css, techStacks.js],
+    stacks: { css, js },
+  },
+  {
+    name: "Number Guesser Game",
+    image: numGuesser,
+    description: "A tiny HTML, CSS ans javascript number guesser game",
+    codeLink: "https://github.com/HanifaTavassoli/number-guesser-game",
+    liveUrl: "https://hanifa-guess-number.netlify.app",
+    featured: false,
+    stacks: { css, js },
   },
   {
     name: "portfolio",
@@ -47,7 +58,7 @@ export const projects = [
     codeLink: "https://github.com/HanifaTavassoli/Portfolio",
     liveUrl: "https://hanifatavassoli-portfolio.netlify.app",
     featured: true,
-    stacks: [techStacks.css, techStacks.tailwind],
+    stacks: { css, tailwind },
   },
   {
     name: "Natours",
@@ -57,7 +68,7 @@ export const projects = [
     codeLink: "https://github.com/HanifaTavassoli/Natours",
     liveUrl: "https://hanifa-natours.netlify.app",
     featured: true,
-    stacks: [techStacks.css, techStacks.sass, techStacks.js],
+    stacks: { css, sass, js },
   },
   {
     name: "Calculator",
@@ -67,7 +78,16 @@ export const projects = [
     codeLink: "https://github.com/HanifaTavassoli/Calculator",
     liveUrl: "https://hanifatavassoli-calculator.vercel.app",
     featured: true,
-    stacks: [techStacks.css, techStacks.react],
+    stacks: { css, react },
+  },
+  {
+    name: "Mortgage Calculator",
+    image: mortgageCalc,
+    description: "Simple Mortgage Calculator for monthly and total repayments.",
+    codeLink: "https://github.com/HanifaTavassoli/mortgage-calculator",
+    liveUrl: "https://hanifatavassoli-mortgage-calculator.vercel.app",
+    featured: true,
+    stacks: { css, react },
   },
   {
     name: "Furnivo",
@@ -76,7 +96,7 @@ export const projects = [
     codeLink: "#",
     liveUrl: "https://dahlia-finalproject.afghanpathways.com",
     featured: true,
-    stacks: [techStacks.wordpress],
+    stacks: { wordpress },
   },
   {
     name: "Travana",
@@ -85,6 +105,6 @@ export const projects = [
     codeLink: "#",
     liveUrl: "https://dahlia.afghanpathways.com",
     featured: false,
-    stacks: [techStacks.wordpress],
+    stacks: { wordpress },
   },
 ];

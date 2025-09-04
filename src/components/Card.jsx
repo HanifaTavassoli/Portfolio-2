@@ -5,7 +5,7 @@ function Card({
   liveUrl,
   codeLink,
   featured,
-  stacks = [],
+  stacks,
 }) {
   return (
     <>
@@ -14,7 +14,7 @@ function Card({
           <img
             src={image}
             alt={`${name} project`}
-            className="transition-transform duration-500 hover:scale-105"
+            className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
           />
         </a>
         <div className="text-start p-5">
@@ -25,7 +25,7 @@ function Card({
             )}
           </div>
           <div className="flex flex-row mb-4 gap-3">
-            {stacks.map((stack) => (
+            {Object.values(stacks).map((stack) => (
               <img src={stack} alt={`${stack} logo`} className="w-7" />
             ))}
           </div>
