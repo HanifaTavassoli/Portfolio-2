@@ -17,6 +17,16 @@ function Projects() {
 
   const [filteredProj, setFilteredProj] = useState(projects);
 
+  const onFilter = (tech) => {
+    if (tech == "all") {
+      setFilteredProj(projects);
+    } else {
+      const filteredProjects = projects.filter((proj) =>
+        Object.keys(proj.stacks).includes(tech)
+      );
+      setFilteredProj(filteredProjects);
+    }
+  };
   return (
     <section
       id="projects-section"
@@ -27,7 +37,7 @@ function Projects() {
           My Projects
         </h2>
 
-        <ProjectFilterBar techs={techs} />
+        <ProjectFilterBar techs={techs} onFilter={onFilter} />
 
         <div className="grid gap-x-0 md:gap-x-8 gap-y-8 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center mx-auto">
           {filteredProj.length == 0 ? (
