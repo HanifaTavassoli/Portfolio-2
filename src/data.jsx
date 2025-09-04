@@ -39,7 +39,7 @@ export const projects = [
     codeLink: "https://github.com/HanifaTavassoli/Omnifood",
     liveUrl: "https://hanifa-omnifood.netlify.app",
     featured: true,
-    stacks: [techStacks.css, techStacks.js],
+    stacks: { css, js },
   },
   {
     name: "Number Guesser Game",
@@ -48,7 +48,7 @@ export const projects = [
     codeLink: "https://github.com/HanifaTavassoli/number-guesser-game",
     liveUrl: "https://hanifa-guess-number.netlify.app",
     featured: false,
-    stacks: [techStacks.css, techStacks.js],
+    stacks: { css, js },
   },
   {
     name: "portfolio",
@@ -58,7 +58,7 @@ export const projects = [
     codeLink: "https://github.com/HanifaTavassoli/Portfolio",
     liveUrl: "https://hanifatavassoli-portfolio.netlify.app",
     featured: true,
-    stacks: [techStacks.css, techStacks.tailwind],
+    stacks: { css, tailwind },
   },
   {
     name: "Natours",
@@ -68,7 +68,7 @@ export const projects = [
     codeLink: "https://github.com/HanifaTavassoli/Natours",
     liveUrl: "https://hanifa-natours.netlify.app",
     featured: true,
-    stacks: [techStacks.css, techStacks.sass, techStacks.js],
+    stacks: { css, sass, js },
   },
   {
     name: "Calculator",
@@ -78,7 +78,7 @@ export const projects = [
     codeLink: "https://github.com/HanifaTavassoli/Calculator",
     liveUrl: "https://hanifatavassoli-calculator.vercel.app",
     featured: true,
-    stacks: [techStacks.css, techStacks.react],
+    stacks: { css, react },
   },
   {
     name: "Mortgage Calculator",
@@ -87,7 +87,7 @@ export const projects = [
     codeLink: "https://github.com/HanifaTavassoli/mortgage-calculator",
     liveUrl: "https://hanifatavassoli-mortgage-calculator.vercel.app",
     featured: true,
-    stacks: [techStacks.css, techStacks.react],
+    stacks: { css, react },
   },
   {
     name: "Furnivo",
@@ -96,7 +96,7 @@ export const projects = [
     codeLink: "#",
     liveUrl: "https://dahlia-finalproject.afghanpathways.com",
     featured: true,
-    stacks: [techStacks.wordpress],
+    stacks: { wordpress },
   },
   {
     name: "Travana",
@@ -105,6 +105,6 @@ export const projects = [
     codeLink: "#",
     liveUrl: "https://dahlia.afghanpathways.com",
     featured: false,
-    stacks: [techStacks.wordpress],
+    stacks: { wordpress },
   },
 ];
