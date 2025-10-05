@@ -6,7 +6,7 @@ function Skills() {
     <>
       <section
         id="skills-section"
-        className="py-20 overflow-hidden bg-gray-100 text-black dark:bg-neutral-900/50 dark:text-white"
+        className="py-20 overflow-hidden bg-gray-300 text-black dark:bg-neutral-950/50 dark:text-white"
       >
         <div className="custom-container py-5 mx-auto text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-12">

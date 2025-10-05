@@ -1,7 +1,7 @@
 import darkLogo from "../assets/img/dark_logo.png";
 import lightLogo from "../assets/img/light_logo.png";
 import { useState } from "react";
-
+import { NavLink } from "react-router-dom";
 function Navbar({ isDark, toggleTheme }) {
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -20,36 +20,57 @@ function Navbar({ isDark, toggleTheme }) {
         aria-label="Global"
       >
         <div className="hidden lg:flex">
-          <a href="#">
+          <NavLink to="/">
             <span className="sr-only">Hanifa Tavassoli</span>
             <img
               src={isDark ? darkLogo : lightLogo}
               alt="logo"
               className="h-12 w-auto"
             />
-          </a>
+          </NavLink>
         </div>
         <div className="hidden lg:flex w-100">
           <ul className="flex items-center justify-around w-full lg:gap-x-12">
             <li>
-              <a href="#hero-section" className="hover:text-sky-500">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `hover:text-sky-500 ${isActive ? "text-sky-500" : ""}`
+                }
+              >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#about-section" className="hover:text-sky-500">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  `hover:text-sky-500 ${isActive ? "text-sky-500" : ""}`
+                }
+              >
                 About
-              </a>
+              </NavLink>
             </li>
+
             <li>
-              <a href="#skills-section" className="hover:text-sky-500">
-                Skills
-              </a>
-            </li>
-            <li>
-              <a href="#projects-section" className="hover:text-sky-500">
+              <NavLink
+                to="/projects"
+                className={({ isActive }) =>
+                  `hover:text-sky-500 ${isActive ? "text-sky-500" : ""}`
+                }
+              >
                 Projects
-              </a>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `hover:text-sky-500 ${isActive ? "text-sky-500" : ""}`
+                }
+              >
+                Contact
+              </NavLink>
             </li>
             <li>
               <button
@@ -67,14 +88,14 @@ function Navbar({ isDark, toggleTheme }) {
         </div>
         {/* <!-- Mobile menu toggle button --> */}
         <div className="flex items-center w-full px-4 py-2 lg:hidden bg-gray-100/50 text-black dark:bg-neutral-900/50 dark:text-white fixed top-0 justify-between">
-          <a href="#">
+          <NavLink to="/">
             <span className="sr-only">Hanifa Tavassoli</span>
             <img
               src={isDark ? darkLogo : lightLogo}
               alt="logo"
               className="h-12 w-auto"
             />
-          </a>
+          </NavLink>
           <button
             id="open-menu"
             type="button"
@@ -109,14 +130,14 @@ function Navbar({ isDark, toggleTheme }) {
         aria-modal="true"
       >
         <div className="flex justify-between items-center p-6">
-          <a href="#">
+          <NavLink to="/">
             <span className="sr-only">Hanifa Tavassoli</span>
             <img
               src={isDark ? darkLogo : lightLogo}
               alt="logo"
               className="h-12 w-auto"
             />
-          </a>
+          </NavLink>
           <button
             id="close-menu"
             type="button"
@@ -142,40 +163,46 @@ function Navbar({ isDark, toggleTheme }) {
 
         <ul className="flex flex-col items-start gap-y-6 px-6">
           <li>
-            <a
-              href="#hero-section"
+            <NavLink
+              to="/"
               onClick={() => handleMenuClick("hero-section")}
-              className="hover:text-sky-500"
+              className={({ isActive }) =>
+                `hover:text-sky-500 ${isActive ? "text-sky-500" : ""}`
+              }
             >
               Home
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              href="#about-section"
+            <NavLink
+              to="/about"
               onClick={() => handleMenuClick("about-section")}
-              className="hover:text-sky-500"
+              className={({ isActive }) =>
+                `hover:text-sky-500 ${isActive ? "text-sky-500" : ""}`
+              }
             >
               About
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              href="#skills-section"
-              onClick={() => handleMenuClick("skills-section")}
-              className="hover:text-sky-500"
-            >
-              Skills
-            </a>
-          </li>
-          <li>
-            <a
-              href="#projects-section"
+            <NavLink
+              to="/projects"
               onClick={() => handleMenuClick("projects-section")}
               className="hover:text-sky-500"
             >
               Projects
-            </a>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              onClick={() => handleMenuClick("skills-section")}
+              className={({ isActive }) =>
+                `hover:text-sky-500 ${isActive ? "text-sky-500" : ""}`
+              }
+            >
+              Contact
+            </NavLink>
           </li>
           <li>
             <button

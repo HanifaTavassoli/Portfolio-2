@@ -2,7 +2,7 @@ import darkLogo from "../assets/img/dark_logo.png";
 import lightLogo from "../assets/img/light_logo.png";
 function Footer({ isDark }) {
   return (
-    <footer className="bg-gray-200 text-neutral-800 dark:bg-neutral-800 dark:text-white py-16">
+    <footer className="bg-gray-100 text-black dark:bg-neutral-900 dark:text-white py-16">
       <div className="custom-container grid grid-rows-3 gap-3 justify-items-center  text-center">
         <div>
           <a href="#">
