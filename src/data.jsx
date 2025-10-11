@@ -4,6 +4,9 @@ import portfolio from "./assets/img/Projects/portfolio.png";
 import natours from "./assets/img/Projects/natours.png";
 import calculator from "./assets/img/Projects/calculator.png";
 import mortgageCalc from "./assets/img/Projects/mortgage-calculator.jpg";
+import faqAccordion from "./assets/img/Projects/faq-accordion.jpg";
+import notificationpage from "./assets/img/Projects/notification-page.jpg";
+import tipCalculator from "./assets/img/Projects/tip-calculator-app.jpg";
 import travana from "./assets/img/Projects/travana.png";
 import furnivo from "./assets/img/Projects/furnivo-homepage.png";
 
@@ -109,13 +112,55 @@ export const projects = [
       "The Mortgage Calculator is a straightforward tool designed to help users calculate their monthly and total mortgage repayments. By inputting basic details such as loan amount, interest rate, and loan term, the calculator provides an instant breakdown of monthly payments, total repayments, and the interest over the life of the loan. Its intuitive and clean interface ensures an easy-to-use experience, making it a perfect tool for potential homebuyers, real estate investors, or anyone looking to get a clear understanding of their mortgage obligations. Built with accuracy in mind, the Mortgage Calculator offers a quick, reliable way to estimate mortgage payments and plan for the future.",
     codeLink: "https://github.com/HanifaTavassoli/mortgage-calculator",
     liveUrl: "https://hanifatavassoli-mortgage-calculator.vercel.app",
-    featured: true,
+    featured: false,
     status: "Completed",
 
     stacks: { css, react },
   },
   {
     id: 7,
+    name: "FAQ accordion",
+    image: faqAccordion,
+    shortDesc: "A collapsible FAQ component that expands and hides answers.",
+    longDesc:
+      "This FAQ Accordion is a versatile, interactive component designed to streamline the user experience by allowing users to easily access answers to frequently asked questions. The accordion enables users to hide and show answers with a simple click, improving navigation and saving valuable screen space. With a strong focus on accessibility, this component supports keyboard navigation, allowing users to expand or collapse answers using the keyboard alone. The design is fully responsive, ensuring an optimal user experience across all devices, from mobile phones to desktop screens. Each interactive element, such as clickable questions, includes hover and focus states to improve usability and provide visual feedback. Whether you’re building a website, app, or dashboard, this FAQ accordion provides a clean, user-friendly way to present information that enhances user engagement and accessibility.",
+    codeLink: "https://github.com/HanifaTavassoli/faq-accordion",
+    liveUrl: "https://hanifatavassoli-faqaccordion.netlify.app",
+    featured: true,
+    status: "Completed",
+
+    stacks: { tailwind, react },
+  },
+  {
+    id: 8,
+    name: "Notification Page",
+    image: notificationpage,
+    shortDesc: "A Notification that displays and marks unread items as read.",
+    longDesc:
+      "The Notification Page is a practical tool designed to help users manage and track their notifications efficiently. By displaying both read and unread messages, it ensures users can quickly identify which notifications need attention. With features like the 'Mark all as read' button, users can instantly update the status of all unread messages, providing a clear overview of their notification inbox. The page is designed to adapt seamlessly across devices, offering an optimal viewing experience on both mobile and desktop screens. Its clean, user-friendly interface and interactive elements, such as hover and focus states, make it easy for users to navigate through their notifications. Ideal for anyone managing large volumes of alerts or updates, the Notification Page delivers a simple, organized way to keep track of important information and stay on top of notifications with ease.",
+    codeLink: "https://github.com/HanifaTavassoli/notifications-page",
+    liveUrl: "https://hanifatavassoli-notifications-page.vercel.app",
+    featured: false,
+    status: "Completed",
+
+    stacks: { tailwind, react },
+  },
+  {
+    id: 9,
+    name: "Tip Calculator App",
+    image: tipCalculator,
+    shortDesc:
+      "A Calculator to  calculate tip amounts based on the bill and percentage.",
+    longDesc:
+      "The Tip Calculator App is a simple yet powerful tool designed to help users quickly calculate tip amounts and split the total bill. By entering the bill amount and selecting the tip percentage, the app instantly provides the total tip amount, the total cost including the tip, and the cost per person if the bill is being shared. With a clean, user-friendly interface, it ensures a seamless experience for anyone looking to accurately calculate their tip and manage their dining expenses. Ideal for group meals, restaurants, or anyone looking to simplify the process of calculating tips, the Tip Calculator App is a reliable and convenient tool to make tipping straightforward and hassle-free.",
+    liveUrl: "https://hanifatavassoli-tip-calculator.netlify.app",
+    featured: true,
+    status: "Completed",
+
+    stacks: { tailwind, react },
+  },
+  {
+    id: 10,
     name: "Furnivo",
     image: furnivo,
     shortDesc: "A WordPress site showcasing stylish furniture collections.",
@@ -128,7 +173,7 @@ export const projects = [
     stacks: { wordpress },
   },
   {
-    id: 8,
+    id: 11,
     name: "Travana",
     image: travana,
     shortDesc: "A custom travel service with personalized luxury vacations.",
