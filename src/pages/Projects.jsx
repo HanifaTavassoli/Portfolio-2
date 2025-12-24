@@ -14,6 +14,8 @@ function Projects({ isDark, toggleTheme }) {
     "tailwind",
     "react",
     "wordpress",
+    "AI",
+    "API",
   ];
 
   const [filteredProj, setFilteredProj] = useState(projects);
