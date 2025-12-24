@@ -21,6 +21,8 @@ import react from "./assets/img/skills/react.svg";
 import mysql from "./assets/img/skills/mysql.svg";
 import git from "./assets/img/skills/git.svg";
 import wordpress from "./assets/img/skills/wordpress.png";
+import AI from "./assets/img/skills/ai.png";
+import API from "./assets/img/skills/api.png";
 
 export const techStacks = {
   html: html,
@@ -33,6 +35,8 @@ export const techStacks = {
   mysql: mysql,
   git: git,
   wordpress: wordpress,
+  AI: AI,
+  API: API,
 };
 
 export const projects = [
@@ -45,7 +49,7 @@ export const projects = [
       "MoodTracker is a custom mood tracking and mental wellness application that empowers users to better understand their emotions through daily mood logging and reflection. With a strong focus on simplicity, privacy, and emotional balance, MoodTracker allows users to record their moods, add personal notes, and observe emotional patterns over time. The platform provides AI-powered suggestions designed to support mindfulness, stress management, and emotional well-being based on individual mood entries. Built to run entirely in the browser, MoodTracker ensures a private and secure experience by storing all data locally. Whether users are looking to build emotional awareness, reduce stress, or maintain a healthier mental state, MoodTracker offers a flexible and supportive solution that makes emotional well-being easy and accessible.",
     codeLink: "https://github.com/HanifaTavassoli/Mood-Tracker",
     liveUrl: "https://hanifatavassoli-moodtracker.netlify.app/",
-    stacks: { tailwind, react },
+    stacks: { tailwind, react, AI, API },
   },
   {
     id: 2,
