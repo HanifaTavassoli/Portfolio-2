@@ -9,6 +9,7 @@ import notificationpage from "./assets/img/Projects/notification-page.jpg";
 import tipCalculator from "./assets/img/Projects/tip-calculator-app.jpg";
 import travana from "./assets/img/Projects/travana.png";
 import furnivo from "./assets/img/Projects/furnivo-homepage.png";
+import moodTracker from "./assets/img/Projects/MoodTracker.png";
 
 import html from "./assets/img/skills/html-5.svg";
 import css from "./assets/img/skills/css-3.svg";
@@ -37,102 +38,17 @@ export const techStacks = {
 export const projects = [
   {
     id: 1,
-    name: "omnifood",
-    image: omnifood,
-    shortDesc: "a custom healthy meal delivered website.",
+    name: "MoodTracker",
+    image: moodTracker,
+    shortDesc: "A custom mood tracking and mental wellness web application.",
     longDesc:
-      "OmniFood is a custom healthy meal delivery service that empowers users to enjoy nutritious, personalized meals delivered straight to their doorstep. With a focus on convenience, taste, and nutrition, OmniFood allows customers to tailor their meal plans according to specific dietary preferences, such as vegan, gluten-free, or keto. The platform offers a wide variety of fresh, locally sourced ingredients that are expertly prepared by chefs to ensure each meal is not only delicious but also aligned with health goals. OmniFood also promotes sustainability by using eco-friendly packaging and reducing food waste. Whether you’re looking to maintain a balanced diet, lose weight, or fuel your workouts, OmniFood provides a convenient and flexible solution that makes healthy eating easy and accessible.",
-    codeLink: "https://github.com/HanifaTavassoli/Omnifood",
-    liveUrl: "https://hanifa-omnifood.netlify.app",
-    featured: true,
-    status: "Completed",
-    stacks: { css, js },
-  },
-  {
-    id: 2,
-    name: "Number Guesser Game",
-    image: numGuesser,
-    shortDesc: "A tiny HTML, CSS ans javascript number guesser game",
-    longDesc:
-      "The Number Guesser Game is a simple yet addictive game built with HTML, CSS, and JavaScript. Players are tasked with guessing a randomly generated number within a specified range. After each guess, the game provides feedback—whether the guess is too high, too low, or correct—helping players refine their next guess. The game continues until the correct number is guessed, and it tracks the total number of attempts. With its clean and minimalistic design, this game is perfect for anyone looking to improve their number-guessing skills or enjoy a fun, quick challenge. It's an excellent project for web development beginners and those wanting to practice JavaScript in a playful, engaging way.",
-    codeLink: "https://github.com/HanifaTavassoli/number-guesser-game",
-    liveUrl: "https://hanifa-guess-number.netlify.app",
-    featured: false,
-    status: "Completed",
-    stacks: { css, js },
-  },
-  {
-    id: 3,
-    name: "portfolio",
-    image: portfolio,
-    shortDesc:
-      "A personal portfolio website to showcase my skills and projects.",
-    longDesc:
-      "The Portfolio website is a personal space designed to showcase my skills, projects, and achievements as a developer. Created using modern web technologies, it serves as an online resume where visitors can explore my work, understand my development journey, and get a glimpse of my technical expertise. The website highlights key projects, each with detailed descriptions and links to live demos or GitHub repositories. It also includes sections about my background, skills, and contact information, allowing potential clients or employers to reach out easily. With a sleek, responsive design and a user-friendly interface, the Portfolio site provides a professional yet personal showcase of my capabilities as a developer.",
-    codeLink: "https://github.com/HanifaTavassoli/Portfolio",
-    liveUrl: "https://hanifatavassoli-portfolio.netlify.app",
-    featured: true,
-    status: "In progress",
-    stacks: { css, tailwind },
-  },
-  {
-    id: 4,
-    name: "Natours",
-    image: natours,
-    shortDesc:
-      "A custom nature tour experience website for adventurous travelers.",
-    longDesc:
-      "Natours is a custom-built website dedicated to providing adventurous travelers with unique nature tour experiences. Whether you're exploring serene forests, hiking through rugged mountains, or embarking on wildlife safaris, Natours offers carefully crafted itineraries that immerse you in the beauty of the natural world. The website features a variety of tours, from guided eco-treks to luxurious nature escapes, all designed to offer unforgettable adventures while promoting sustainability and environmental conservation. With detailed descriptions, high-quality images, and expert tour guides, Natours ensures that each journey is filled with adventure, discovery, and connection to nature. Perfect for those seeking to break free from the ordinary and explore the wild, Natours is your gateway to nature’s most breathtaking destinations.",
-    codeLink: "https://github.com/HanifaTavassoli/Natours",
-    liveUrl: "https://hanifa-natours.netlify.app",
-    featured: true,
-    status: "In progress",
-    stacks: { css, sass, js },
-  },
-  {
-    id: 5,
-    name: "Calculator",
-    image: calculator,
-    shortDesc:
-      "calculator app with a user-friendly interface for quick calculations.",
-    longDesc:
-      "The Calculator app is a sleek and efficient tool designed with a user-friendly interface to provide quick and accurate calculations. Whether you're performing basic arithmetic or more complex mathematical operations, the app ensures a smooth and intuitive experience. Built with modern web technologies, it features large, easy-to-read buttons, a clean layout, and responsive design, making it accessible across various devices. The app handles standard calculations, including addition, subtraction, multiplication, and division, with additional support for more advanced functions. Perfect for daily use, the Calculator app combines practicality and simplicity to help users perform calculations effortlessly, all within a few clicks.",
-    codeLink: "https://github.com/HanifaTavassoli/Calculator",
-    liveUrl: "https://hanifatavassoli-calculator.vercel.app",
-    featured: true,
-    status: "Completed",
-    stacks: { css, react },
-  },
-  {
-    id: 6,
-    name: "Mortgage Calculator",
-    image: mortgageCalc,
-    shortDesc: "Simple Mortgage Calculator for monthly and total repayments.",
-    longDesc:
-      "The Mortgage Calculator is a straightforward tool designed to help users calculate their monthly and total mortgage repayments. By inputting basic details such as loan amount, interest rate, and loan term, the calculator provides an instant breakdown of monthly payments, total repayments, and the interest over the life of the loan. Its intuitive and clean interface ensures an easy-to-use experience, making it a perfect tool for potential homebuyers, real estate investors, or anyone looking to get a clear understanding of their mortgage obligations. Built with accuracy in mind, the Mortgage Calculator offers a quick, reliable way to estimate mortgage payments and plan for the future.",
-    codeLink: "https://github.com/HanifaTavassoli/mortgage-calculator",
-    liveUrl: "https://hanifatavassoli-mortgage-calculator.vercel.app",
-    featured: false,
-    status: "Completed",
-
-    stacks: { css, react },
-  },
-  {
-    id: 7,
-    name: "FAQ accordion",
-    image: faqAccordion,
-    shortDesc: "A collapsible FAQ component that expands and hides answers.",
-    longDesc:
-      "This FAQ Accordion is a versatile, interactive component designed to streamline the user experience by allowing users to easily access answers to frequently asked questions. The accordion enables users to hide and show answers with a simple click, improving navigation and saving valuable screen space. With a strong focus on accessibility, this component supports keyboard navigation, allowing users to expand or collapse answers using the keyboard alone. The design is fully responsive, ensuring an optimal user experience across all devices, from mobile phones to desktop screens. Each interactive element, such as clickable questions, includes hover and focus states to improve usability and provide visual feedback. Whether you’re building a website, app, or dashboard, this FAQ accordion provides a clean, user-friendly way to present information that enhances user engagement and accessibility.",
-    codeLink: "https://github.com/HanifaTavassoli/faq-accordion",
-    liveUrl: "https://hanifatavassoli-faqaccordion.netlify.app",
-    featured: true,
-    status: "Completed",
-
+      "MoodTracker is a custom mood tracking and mental wellness application that empowers users to better understand their emotions through daily mood logging and reflection. With a strong focus on simplicity, privacy, and emotional balance, MoodTracker allows users to record their moods, add personal notes, and observe emotional patterns over time. The platform provides AI-powered suggestions designed to support mindfulness, stress management, and emotional well-being based on individual mood entries. Built to run entirely in the browser, MoodTracker ensures a private and secure experience by storing all data locally. Whether users are looking to build emotional awareness, reduce stress, or maintain a healthier mental state, MoodTracker offers a flexible and supportive solution that makes emotional well-being easy and accessible.",
+    codeLink: "https://github.com/HanifaTavassoli/Mood-Tracker",
+    liveUrl: "https://hanifatavassoli-moodtracker.netlify.app/",
     stacks: { tailwind, react },
   },
   {
-    id: 8,
+    id: 2,
     name: "Notification Page",
     image: notificationpage,
     shortDesc: "A Notification that displays and marks unread items as read.",
@@ -146,7 +62,7 @@ export const projects = [
     stacks: { tailwind, react },
   },
   {
-    id: 9,
+    id: 3,
     name: "Tip Calculator App",
     image: tipCalculator,
     shortDesc:
@@ -160,7 +76,105 @@ export const projects = [
     stacks: { tailwind, react },
   },
   {
+    id: 4,
+    name: "FAQ accordion",
+    image: faqAccordion,
+    shortDesc: "A collapsible FAQ component that expands and hides answers.",
+    longDesc:
+      "This FAQ Accordion is a versatile, interactive component designed to streamline the user experience by allowing users to easily access answers to frequently asked questions. The accordion enables users to hide and show answers with a simple click, improving navigation and saving valuable screen space. With a strong focus on accessibility, this component supports keyboard navigation, allowing users to expand or collapse answers using the keyboard alone. The design is fully responsive, ensuring an optimal user experience across all devices, from mobile phones to desktop screens. Each interactive element, such as clickable questions, includes hover and focus states to improve usability and provide visual feedback. Whether you’re building a website, app, or dashboard, this FAQ accordion provides a clean, user-friendly way to present information that enhances user engagement and accessibility.",
+    codeLink: "https://github.com/HanifaTavassoli/faq-accordion",
+    liveUrl: "https://hanifatavassoli-faqaccordion.netlify.app",
+    featured: true,
+    status: "Completed",
+
+    stacks: { tailwind, react },
+  },
+  {
+    id: 5,
+    name: "Mortgage Calculator",
+    image: mortgageCalc,
+    shortDesc: "Simple Mortgage Calculator for monthly and total repayments.",
+    longDesc:
+      "The Mortgage Calculator is a straightforward tool designed to help users calculate their monthly and total mortgage repayments. By inputting basic details such as loan amount, interest rate, and loan term, the calculator provides an instant breakdown of monthly payments, total repayments, and the interest over the life of the loan. Its intuitive and clean interface ensures an easy-to-use experience, making it a perfect tool for potential homebuyers, real estate investors, or anyone looking to get a clear understanding of their mortgage obligations. Built with accuracy in mind, the Mortgage Calculator offers a quick, reliable way to estimate mortgage payments and plan for the future.",
+    codeLink: "https://github.com/HanifaTavassoli/mortgage-calculator",
+    liveUrl: "https://hanifatavassoli-mortgage-calculator.vercel.app",
+    featured: false,
+    status: "Completed",
+
+    stacks: { css, react },
+  },
+  {
+    id: 6,
+    name: "Calculator",
+    image: calculator,
+    shortDesc:
+      "calculator app with a user-friendly interface for quick calculations.",
+    longDesc:
+      "The Calculator app is a sleek and efficient tool designed with a user-friendly interface to provide quick and accurate calculations. Whether you're performing basic arithmetic or more complex mathematical operations, the app ensures a smooth and intuitive experience. Built with modern web technologies, it features large, easy-to-read buttons, a clean layout, and responsive design, making it accessible across various devices. The app handles standard calculations, including addition, subtraction, multiplication, and division, with additional support for more advanced functions. Perfect for daily use, the Calculator app combines practicality and simplicity to help users perform calculations effortlessly, all within a few clicks.",
+    codeLink: "https://github.com/HanifaTavassoli/Calculator",
+    liveUrl: "https://hanifatavassoli-calculator.vercel.app",
+    featured: true,
+    status: "Completed",
+    stacks: { css, react },
+  },
+  {
+    id: 7,
+    name: "Natours",
+    image: natours,
+    shortDesc:
+      "A custom nature tour experience website for adventurous travelers.",
+    longDesc:
+      "Natours is a custom-built website dedicated to providing adventurous travelers with unique nature tour experiences. Whether you're exploring serene forests, hiking through rugged mountains, or embarking on wildlife safaris, Natours offers carefully crafted itineraries that immerse you in the beauty of the natural world. The website features a variety of tours, from guided eco-treks to luxurious nature escapes, all designed to offer unforgettable adventures while promoting sustainability and environmental conservation. With detailed descriptions, high-quality images, and expert tour guides, Natours ensures that each journey is filled with adventure, discovery, and connection to nature. Perfect for those seeking to break free from the ordinary and explore the wild, Natours is your gateway to nature’s most breathtaking destinations.",
+    codeLink: "https://github.com/HanifaTavassoli/Natours",
+    liveUrl: "https://hanifa-natours.netlify.app",
+    featured: true,
+    status: "In progress",
+    stacks: { css, sass, js },
+  },
+
+  {
+    id: 8,
+    name: "portfolio",
+    image: portfolio,
+    shortDesc:
+      "A personal portfolio website to showcase my skills and projects.",
+    longDesc:
+      "The Portfolio website is a personal space designed to showcase my skills, projects, and achievements as a developer. Created using modern web technologies, it serves as an online resume where visitors can explore my work, understand my development journey, and get a glimpse of my technical expertise. The website highlights key projects, each with detailed descriptions and links to live demos or GitHub repositories. It also includes sections about my background, skills, and contact information, allowing potential clients or employers to reach out easily. With a sleek, responsive design and a user-friendly interface, the Portfolio site provides a professional yet personal showcase of my capabilities as a developer.",
+    codeLink: "https://github.com/HanifaTavassoli/Portfolio",
+    liveUrl: "https://hanifatavassoli-portfolio.netlify.app",
+    featured: true,
+    status: "In progress",
+    stacks: { css, tailwind },
+  },
+  {
+    id: 9,
+    name: "omnifood",
+    image: omnifood,
+    shortDesc: "a custom healthy meal delivered website.",
+    longDesc:
+      "OmniFood is a custom healthy meal delivery service that empowers users to enjoy nutritious, personalized meals delivered straight to their doorstep. With a focus on convenience, taste, and nutrition, OmniFood allows customers to tailor their meal plans according to specific dietary preferences, such as vegan, gluten-free, or keto. The platform offers a wide variety of fresh, locally sourced ingredients that are expertly prepared by chefs to ensure each meal is not only delicious but also aligned with health goals. OmniFood also promotes sustainability by using eco-friendly packaging and reducing food waste. Whether you’re looking to maintain a balanced diet, lose weight, or fuel your workouts, OmniFood provides a convenient and flexible solution that makes healthy eating easy and accessible.",
+    codeLink: "https://github.com/HanifaTavassoli/Omnifood",
+    liveUrl: "https://hanifa-omnifood.netlify.app",
+    featured: true,
+    status: "Completed",
+    stacks: { css, js },
+  },
+  {
     id: 10,
+    name: "Number Guesser Game",
+    image: numGuesser,
+    shortDesc: "A tiny HTML, CSS ans javascript number guesser game",
+    longDesc:
+      "The Number Guesser Game is a simple yet addictive game built with HTML, CSS, and JavaScript. Players are tasked with guessing a randomly generated number within a specified range. After each guess, the game provides feedback—whether the guess is too high, too low, or correct—helping players refine their next guess. The game continues until the correct number is guessed, and it tracks the total number of attempts. With its clean and minimalistic design, this game is perfect for anyone looking to improve their number-guessing skills or enjoy a fun, quick challenge. It's an excellent project for web development beginners and those wanting to practice JavaScript in a playful, engaging way.",
+    codeLink: "https://github.com/HanifaTavassoli/number-guesser-game",
+    liveUrl: "https://hanifa-guess-number.netlify.app",
+    featured: false,
+    status: "Completed",
+    stacks: { css, js },
+  },
+
+  {
+    id: 11,
     name: "Furnivo",
     image: furnivo,
     shortDesc: "A WordPress site showcasing stylish furniture collections.",
@@ -173,7 +187,7 @@ export const projects = [
     stacks: { wordpress },
   },
   {
-    id: 11,
+    id: 12,
     name: "Travana",
     image: travana,
     shortDesc: "A custom travel service with personalized luxury vacations.",
